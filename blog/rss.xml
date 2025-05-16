@@ -4,10 +4,124 @@
         <title>Knowledge Base Blog</title>
         <link>https://www.my-universe.hinnytsang.com/knowledge-base/blog</link>
         <description>Knowledge Base Blog</description>
-        <lastBuildDate>Tue, 13 May 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 16 May 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Generative AI Evaluation Methods]]></title>
+            <link>https://www.my-universe.hinnytsang.com/knowledge-base/blog/generative-ai-evaluation-methods</link>
+            <guid>https://www.my-universe.hinnytsang.com/knowledge-base/blog/generative-ai-evaluation-methods</guid>
+            <pubDate>Fri, 16 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[The evaluation of generative AI models is a complex task that requires a combination of qualitative and quantitative methods. Here is the points that I summarized from the Machine Learning Operations with Vertex AI tutorial from Google.]]></description>
+            <content:encoded><![CDATA[<p>The evaluation of generative AI models is a complex task that requires a combination of qualitative and quantitative methods. Here is the points that I summarized from the Machine Learning Operations with Vertex AI tutorial from Google.</p>
+<p>In general, the evaluation methods can be categorized into several types:</p>
+<ol>
+<li>
+<p>Binary Evaluation</p>
+<ul>
+<li>e.g. positive or negative sentiment analysis, spam detection, and appropriate content detection.</li>
+</ul>
+</li>
+<li>
+<p>Category Evaluation</p>
+<ul>
+<li>e.g. topic classification, sentiment analysis including neutral, and product rating.</li>
+</ul>
+</li>
+<li>
+<p>Ranking Evaluation</p>
+<ul>
+<li>Rank the relative quality for different outputs.</li>
+<li>e.g. ranking search results, ranking product recommendations, and ranking news articles.</li>
+</ul>
+</li>
+<li>
+<p>Numerical Evaluation</p>
+<ul>
+<li>Assigns a quantitative score to model output.</li>
+<li>e.g. BLEU, ROUGE, METEOR, perplexity, and F1 score.</li>
+</ul>
+</li>
+<li>
+<p>Text Evaluation</p>
+<ul>
+<li>Evaluation of the text by human.</li>
+</ul>
+</li>
+<li>
+<p>Multi-task Evaluation</p>
+<ul>
+<li>Mixture of the above methods.</li>
+</ul>
+</li>
+</ol>
+<p>The choice of evaluation method depends on the specific task and the goals of the evaluation. Below are some examples:</p>
+<ol>
+<li>
+<p>Lexical Similarity</p>
+<ul>
+<li>Measure the similarity between the model's output and reference text, based on word overlap, sequence of words, or semantic similarity.</li>
+<li>e.g. BLEU focuses on n-gram overlap, ROUGE focuses on recall, and METEOR focuses on both precision and recall.</li>
+</ul>
+</li>
+<li>
+<p>Linguistic Quality</p>
+<ul>
+<li>Evaluate the fluency, coherence, and grammatical correctness of the generated text.</li>
+<li>e.g. Perplexity, BLEURT.</li>
+</ul>
+</li>
+<li>
+<p>Task-Specific Evaluation</p>
+<ul>
+<li>Evaluate the performance of the model on specific tasks, such as summarization, translation, or question answering.</li>
+<li>e.g. BLEU for translation, and ROUGE for summarization.</li>
+</ul>
+</li>
+<li>
+<p>Safety and fairness</p>
+<ul>
+<li>Evaluate the model's output for safety and fairness, including bias detection and harmful content detection.</li>
+<li>e.g. toxicity detection, hate speech detection, and bias detection or even human evaluation.</li>
+</ul>
+</li>
+<li>
+<p>Groundedness</p>
+<ul>
+<li>Evaluate the factual accuracy of the model's output.</li>
+<li>e.g. Fact-checking tools, knowledge-based integration and human evaluation.</li>
+</ul>
+</li>
+<li>
+<p>User-Centric Evaluation</p>
+<ul>
+<li>Focus on the user experience and satisfaction with the model's output.</li>
+<li>e.g. User survey.</li>
+</ul>
+</li>
+</ol>
+<p>Moreover, there are some common evaluation paradigms:</p>
+<ol>
+<li>
+<p>Pointwise Evaluation:</p>
+<ul>
+<li>Evaluating model behavior in production.</li>
+<li>Absolute performance of a single model.</li>
+<li>Identifying behaviors to prioritize for tuning.</li>
+<li>Establishing a baseline for model performance.</li>
+</ul>
+</li>
+<li>
+<p>Pairwise Evaluation:</p>
+<ul>
+<li>Comparison of two models.</li>
+</ul>
+</li>
+</ol>
+<p>Evaluation methods are not only computation based, but also be model based, using LLM as a judge to evaluate the model output (Google Auto Side by Side). In summary, the choice of evaluation method depends on the specific task and the goals of the evaluation. I may talk about more about the evaluation metrics in the future.</p>]]></content:encoded>
+            <category>Generative AI</category>
+        </item>
         <item>
             <title><![CDATA[Ito's Lamma]]></title>
             <link>https://www.my-universe.hinnytsang.com/knowledge-base/blog/ito-lamma</link>

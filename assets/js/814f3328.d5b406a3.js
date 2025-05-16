@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkknowledge_base=self.webpackChunkknowledge_base||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Ito\'s Lamma","permalink":"/knowledge-base/blog/ito-lamma","unlisted":false,"date":"2025-05-13T00:00:00.000Z"}]}')}}]);
