@@ -4,10 +4,62 @@
         <title>Knowledge Base Blog</title>
         <link>https://www.my-universe.hinnytsang.com/knowledge-base</link>
         <description>Knowledge Base Blog</description>
-        <lastBuildDate>Sun, 03 Aug 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 07 Aug 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Market Data]]></title>
+            <link>https://www.my-universe.hinnytsang.com/knowledge-base/market-data</link>
+            <guid>https://www.my-universe.hinnytsang.com/knowledge-base/market-data</guid>
+            <pubDate>Thu, 07 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Market data symbology refers to the system of codes and symbols to uniquely identify financial instruments and their attributes.]]></description>
+            <content:encoded><![CDATA[<p>Market data symbology refers to the system of codes and symbols to uniquely identify financial instruments and their attributes.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ticker-symbols">Ticker Symbols<a href="https://www.my-universe.hinnytsang.com/knowledge-base/market-data#ticker-symbols" class="hash-link" aria-label="Direct link to Ticker Symbols" title="Direct link to Ticker Symbols">​</a></h2>
+<p>Alphabetic codes used to uniquely identify securities on exchange, examples:</p>
+<ul>
+<li>AAPL for Apple Inc.</li>
+<li>TSLA for Tesla Inc.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="isin-international-securities-identification-number">ISIN (International Securities Identification Number)<a href="https://www.my-universe.hinnytsang.com/knowledge-base/market-data#isin-international-securities-identification-number" class="hash-link" aria-label="Direct link to ISIN (International Securities Identification Number)" title="Direct link to ISIN (International Securities Identification Number)">​</a></h2>
+<p>A 12-character alphanumeric code that uniquely identifies a security, used globally. Example:</p>
+<ul>
+<li>US0378331005 for Apple Inc.</li>
+<li>US88160R1014 for Tesla Inc.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cusip-committee-on-uniform-securities-identification-procedures">CUSIP (Committee on Uniform Securities Identification Procedures)<a href="https://www.my-universe.hinnytsang.com/knowledge-base/market-data#cusip-committee-on-uniform-securities-identification-procedures" class="hash-link" aria-label="Direct link to CUSIP (Committee on Uniform Securities Identification Procedures)" title="Direct link to CUSIP (Committee on Uniform Securities Identification Procedures)">​</a></h2>
+<p>A 9-character alphanumeric code used in the <em>United States</em> to identify securities. Example:</p>
+<ul>
+<li>037833100 for Apple Inc.</li>
+<li>88160R101 for Tesla Inc.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="sedol-stock-exchange-daily-official-list">SEDOL (Stock Exchange Daily Official List)<a href="https://www.my-universe.hinnytsang.com/knowledge-base/market-data#sedol-stock-exchange-daily-official-list" class="hash-link" aria-label="Direct link to SEDOL (Stock Exchange Daily Official List)" title="Direct link to SEDOL (Stock Exchange Daily Official List)">​</a></h2>
+<p>A 7-character alphanumeric code used in the <em>United Kingdom and Ireland</em> to identify securities. Example:</p>
+<ul>
+<li>0263494 for Apple Inc.</li>
+<li>0734644 for Tesla Inc.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="figi-financial-instrument-global-identifier">FIGI (Financial Instrument Global Identifier)<a href="https://www.my-universe.hinnytsang.com/knowledge-base/market-data#figi-financial-instrument-global-identifier" class="hash-link" aria-label="Direct link to FIGI (Financial Instrument Global Identifier)" title="Direct link to FIGI (Financial Instrument Global Identifier)">​</a></h2>
+<p>A 12-character alphanumeric code that uniquely identifies a financial instrument, used globally. Example:</p>
+<ul>
+<li>BBG000B9XRY4 for Apple Inc.</li>
+<li>BBG000B9XRY5 for Tesla Inc.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ric-reuters-instrument-code">RIC (Reuters Instrument Code)<a href="https://www.my-universe.hinnytsang.com/knowledge-base/market-data#ric-reuters-instrument-code" class="hash-link" aria-label="Direct link to RIC (Reuters Instrument Code)" title="Direct link to RIC (Reuters Instrument Code)">​</a></h2>
+<p>An alphanumeric code used to identify financial instruments, primarily in the <em>Reuters</em> trading platform. Example:</p>
+<ul>
+<li>AAPL.O for Apple Inc.</li>
+<li>TSLA.O for Tesla Inc.</li>
+</ul>
+<h1>Summary of Market Data Identifiers</h1>
+<table><thead><tr><th>Identifier</th><th>Length</th><th>Coverage</th><th>Structure</th><th>Primary Use</th><th>Key Benefits</th><th>Limitations</th></tr></thead><tbody><tr><td><strong>Ticker Symbol</strong></td><td>1-5 chars</td><td>Exchange-specific</td><td>No specific structure</td><td>Quick trading reference</td><td>Simple, widely recognized</td><td>Not globally unique</td></tr><tr><td><strong>ISIN</strong></td><td>12 chars</td><td>Global</td><td>Country(2) + NSIN(9) + *cd(1)</td><td>Cross-border trading</td><td>Universal standard</td><td>Complex calculation</td></tr><tr><td><strong>CUSIP</strong> (Q-sip)</td><td>9 chars</td><td>North America</td><td>Issuer(6) + issue type(2) + cd(1)</td><td>US/Canada trading</td><td>Widely used in North America</td><td>Regional only, proprietary</td></tr><tr><td><strong>SEDOL</strong></td><td>7 chars</td><td>UK/Ireland</td><td>Alphanumeric no vowels + cd(1)</td><td>UK securities trading</td><td>Efficient for UK market</td><td>Limited geographic scope</td></tr><tr><td><strong>FIGI</strong>          (Formerly BBGID)</td><td>12 chars</td><td>Global</td><td>Consonants(2) + 'G' + Alphanumeric no vowels(8) + cd(1)</td><td>Bloomberg ecosystem</td><td>Open-source, free</td><td>Less widely adopted</td></tr><tr><td><strong>RIC</strong></td><td>Variable</td><td>Global</td><td>Alphanumeric, often with exchange suffix</td><td>Reuters trading platform</td><td>Widely used in Reuters</td><td>Not standardized globally</td></tr></tbody></table>
+<p>Where:</p>
+<ul>
+<li>cd: Check Digit</li>
+</ul>
+<h1>Summary of Market Data Identifiers</h1>]]></content:encoded>
+            <category>Interview</category>
+        </item>
         <item>
             <title><![CDATA[Questions to Ask the Interviewer]]></title>
             <link>https://www.my-universe.hinnytsang.com/knowledge-base/questions-to-interviewer-1</link>
