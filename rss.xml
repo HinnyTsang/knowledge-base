@@ -4,10 +4,23 @@
         <title>Knowledge Base Blog</title>
         <link>https://www.my-universe.hinnytsang.com/knowledge-base</link>
         <description>Knowledge Base Blog</description>
-        <lastBuildDate>Sat, 16 Aug 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 07 Sep 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[C++ Standard Library]]></title>
+            <link>https://www.my-universe.hinnytsang.com/knowledge-base/cpp-std</link>
+            <guid>https://www.my-universe.hinnytsang.com/knowledge-base/cpp-std</guid>
+            <pubDate>Sun, 07 Sep 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Notes on C++ Standard Library.]]></description>
+            <content:encoded><![CDATA[<p>Notes on C++ Standard Library.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="deque">Deque<a href="https://www.my-universe.hinnytsang.com/knowledge-base/cpp-std#deque" class="hash-link" aria-label="Direct link to Deque" title="Direct link to Deque">​</a></h2>
+<p>Double-ended queue in C++ STL.</p>
+<p>Unlike queue and stack, it provides random access with O(1) time complexity.</p>
+<p><a href="https://www.my-universe.hinnytsang.com/knowledge-base/assets/files/cpp_deque-9d4317f4d0a93a43a018999dc71c8f6d.png" target="_blank">Example implementation</a></p>]]></content:encoded>
+            <category>C++</category>
+        </item>
         <item>
             <title><![CDATA[Database Design Principles]]></title>
             <link>https://www.my-universe.hinnytsang.com/knowledge-base/database-design-principles</link>
