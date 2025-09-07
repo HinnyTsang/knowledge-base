@@ -17,7 +17,8 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="deque">Deque<a href="https://www.my-universe.hinnytsang.com/knowledge-base/cpp-std#deque" class="hash-link" aria-label="Direct link to Deque" title="Direct link to Deque">​</a></h2>
 <p>Double-ended queue in C++ STL.</p>
 <p>Unlike queue and stack, it provides random access with O(1) time complexity.</p>
-<p><a href="https://www.my-universe.hinnytsang.com/knowledge-base/assets/files/cpp_deque-9d4317f4d0a93a43a018999dc71c8f6d.png" target="_blank">Example implementation</a></p>]]></content>
+<p><img decoding="async" loading="lazy" alt="Example implementation" src="https://www.my-universe.hinnytsang.com/knowledge-base/assets/images/cpp_deque-9d4317f4d0a93a43a018999dc71c8f6d.png" width="254" height="420" class="img_ev3q"></p>
+<p>Hence, two pointer dereferences are required to access an element.</p>]]></content>
         <author>
             <name>Hinny Tsang</name>
             <uri>https://github.com/HinnyTsang</uri>
