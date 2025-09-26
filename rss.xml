@@ -4,10 +4,135 @@
         <title>Knowledge Base Blog</title>
         <link>https://www.my-universe.hinnytsang.com/knowledge-base</link>
         <description>Knowledge Base Blog</description>
-        <lastBuildDate>Sun, 07 Sep 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 25 Sep 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Crypto Catchup]]></title>
+            <link>https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup</link>
+            <guid>https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup</guid>
+            <pubDate>Thu, 25 Sep 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Notes for pepration for crypto interviews.]]></description>
+            <content:encoded><![CDATA[<p>Notes for pepration for crypto interviews.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="terminology">Terminology<a href="https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup#terminology" class="hash-link" aria-label="Direct link to Terminology" title="Direct link to Terminology">​</a></h2>
+<ul>
+<li>FUD: Fear, Uncertainty, Doubt</li>
+<li>HODL: Hold On for Dear Life</li>
+<li>FOMO: Fear of Missing Out</li>
+<li>REKT: Wrecked</li>
+<li>ATH: All Time High</li>
+<li>ATL: All Time Low</li>
+<li>DApp: Decentralized Application</li>
+<li>DEX: Decentralized Exchange</li>
+<li>CEX: Centralized Exchange</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="latest-news">Latest News<a href="https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup#latest-news" class="hash-link" aria-label="Direct link to Latest News" title="Direct link to Latest News">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ohio-approves-vendor-to-process-crypto-patment-for-state-servicse">Ohio approves vendor to process crypto patment for state servicse<a href="https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup#ohio-approves-vendor-to-process-crypto-patment-for-state-servicse" class="hash-link" aria-label="Direct link to Ohio approves vendor to process crypto patment for state servicse" title="Direct link to Ohio approves vendor to process crypto patment for state servicse">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="circle-explore-reversible-usdc-transactions">Circle explore reversible USDC transactions<a href="https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup#circle-explore-reversible-usdc-transactions" class="hash-link" aria-label="Direct link to Circle explore reversible USDC transactions" title="Direct link to Circle explore reversible USDC transactions">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="au-drafts-law-to-tighten-oversight-of-crypto-exchanges">AU drafts law to tighten oversight of crypto exchanges<a href="https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup#au-drafts-law-to-tighten-oversight-of-crypto-exchanges" class="hash-link" aria-label="Direct link to AU drafts law to tighten oversight of crypto exchanges" title="Direct link to AU drafts law to tighten oversight of crypto exchanges">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="bnb-ath">BNB ATH<a href="https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup#bnb-ath" class="hash-link" aria-label="Direct link to BNB ATH" title="Direct link to BNB ATH">​</a></h3>
+<ol>
+<li>BNB chain performance improve</li>
+</ol>
+<ul>
+<li>Speed up block time from 3s to 0.75s</li>
+<li>Capacity increased.</li>
+<li>Gas fee drops by 10 times, make it to be one of the cheapest chains.</li>
+<li>Improved security for MEV attack.</li>
+</ul>
+<ol start="2">
+<li>Environemt improvement</li>
+</ol>
+<ul>
+<li>World Liberty Finance published USD1, to replace BUSD.</li>
+<li>USD1 mainly by Binance chain &gt;&gt; Ethereum &gt;&gt; Solana &gt;&gt; Tron.</li>
+<li>Part of Abu Dhabi-based MGX's 2 billion investment in Binance.</li>
+<li>A lots of Meme coins, RWA tokens, GameFi tokens are launched on BNB chain.</li>
+<li>Pancake Swap (Major DEX on BNB chain)</li>
+<li>Lista DAO (opensource liquidity and lending protocol, operating on BNB &gt;&gt; Eth) (Decentralized Autonomous Organization)</li>
+</ul>
+<ol start="3">
+<li>Mechanism and market sentiment</li>
+</ol>
+<ul>
+<li>Burn mechanism: 1/20 of profit from Binance exchange is used to buy back and burn BNB.</li>
+<li>Quarterly burn, until 100M BNB (50% of total supply) is</li>
+<li>DAT get into BNB burn</li>
+<li>US interest rate drop.</li>
+</ul>
+<ol start="4">
+<li>Others</li>
+</ol>
+<ul>
+<li>4 Sep, Franklin Templeton announced to launch a BNB ETF in US.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rwa-real-world-asset">RWA (Real World Asset)<a href="https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup#rwa-real-world-asset" class="hash-link" aria-label="Direct link to RWA (Real World Asset)" title="Direct link to RWA (Real World Asset)">​</a></h3>
+<ul>
+<li>Tokenized real world asset, like stocks, and commodities, etc.</li>
+<li>中證監 sorpped RWA in hong kong due to</li>
+<li>Mainly on ETH networks., issued by Tether Holdings (hold Bitfinex, issue USDT) / Paxos, etc.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="stable-coin">Stable coin<a href="https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup#stable-coin" class="hash-link" aria-label="Direct link to Stable coin" title="Direct link to Stable coin">​</a></h3>
+<ul>
+<li>Reserve 1 USD for each issued coin.</li>
+<li>USDT (Tether), USDC (Circle), <del>BUSD (Binance)</del>, USD1 (World Liberty Finance)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="xrp">XRP<a href="https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup#xrp" class="hash-link" aria-label="Direct link to XRP" title="Direct link to XRP">​</a></h3>
+<ul>
+<li>
+<p>Issued by Ripple Labs, used in RippleNet</p>
+</li>
+<li>
+<p>TPS is 1500, cost is low.</p>
+</li>
+<li>
+<p>If XRP etf approved in US, price may surge.</p>
+</li>
+<li>
+<p>EVM compatible, can be used in DeFi in the futures.</p>
+</li>
+<li>
+<p>Not PoS or PoS, UNL (Unique Node List): list of trusted validators maintained by Ripple.</p>
+</li>
+<li>
+<p>Risk: Swift collaboration with chainlink to launch CBDC (Central Bank Digital Currency) network, may compete with RippleNet.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ada">ADA<a href="https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup#ada" class="hash-link" aria-label="Direct link to ADA" title="Direct link to ADA">​</a></h3>
+<ul>
+<li>Issued by Cardano Foundation.</li>
+<li>PoS chain, low energy consumption.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="sol">SOL<a href="https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup#sol" class="hash-link" aria-label="Direct link to SOL" title="Direct link to SOL">​</a></h2>
+<ul>
+<li>Issued by Solana Foundation.</li>
+<li>PoS</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="eth">ETH<a href="https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup#eth" class="hash-link" aria-label="Direct link to ETH" title="Direct link to ETH">​</a></h2>
+<ul>
+<li>The merge: switch from PoW to PoS, reduce energy consumption by 99.95% at 22 Sep 2022.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="metrics">Metrics<a href="https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup#metrics" class="hash-link" aria-label="Direct link to Metrics" title="Direct link to Metrics">​</a></h2>
+<p>Unlike traditional finance, we can measure by sth like PE ratio, PB ratio, etc. Crypto use the following metrics:</p>
+<ol>
+<li>Market Cap = Price * Circulating Supply</li>
+<li>TVL (Total Value Locked) = Total value of asset locked in a protocol (eg. DeFi protocol)</li>
+<li>FDV (Fully Diluted Valuation) = Price * Total Supply</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="concepts">Concepts<a href="https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup#concepts" class="hash-link" aria-label="Direct link to Concepts" title="Direct link to Concepts">​</a></h2>
+<ul>
+<li>Yield: earn from staking, lending, liquidity providing, etc.<!-- -->
+<ul>
+<li>Staking: lock up crypto to get rewards, limited to PoS chain.</li>
+<li>Earn: like saving account, (locked/ flexi) crypto to get interest, usually higher than staking.</li>
+<li>Yield farming: provide liquidity to DEX, earn fee and token reward (Liquidity mining)</li>
+<li>APY (Annual Percentage Yield): interest rate with compounding.</li>
+</ul>
+</li>
+</ul>]]></content:encoded>
+            <category>Cryptocurrency</category>
+        </item>
         <item>
             <title><![CDATA[C++ Standard Library]]></title>
             <link>https://www.my-universe.hinnytsang.com/knowledge-base/cpp-std</link>
