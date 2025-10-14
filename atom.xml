@@ -2,11 +2,540 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.my-universe.hinnytsang.com/knowledge-base</id>
     <title>Knowledge Base Blog</title>
-    <updated>2025-09-25T00:00:00.000Z</updated>
+    <updated>2025-10-01T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.my-universe.hinnytsang.com/knowledge-base"/>
     <subtitle>Knowledge Base Blog</subtitle>
     <icon>https://www.my-universe.hinnytsang.com/knowledge-base/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Operating Systems]]></title>
+        <id>https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems</id>
+        <link href="https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems"/>
+        <updated>2025-10-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Notes on CMU 213/513 Introduction to Computer Systems.]]></summary>
+        <content type="html"><![CDATA[<p>Notes on CMU 213/513 Introduction to Computer Systems.</p>
+<p>Course link: <a href="https://www.cs.cmu.edu/~213/" target="_blank" rel="noopener noreferrer">https://www.cs.cmu.edu/~213/</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="x86-64-registers">X86-64 Registers<a href="https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems#x86-64-registers" class="hash-link" aria-label="Direct link to X86-64 Registers" title="Direct link to X86-64 Registers">​</a></h2>
+<table><thead><tr><th>Register</th><th>Description</th><th>32-bit Equivalent</th></tr></thead><tbody><tr><td>%rax</td><td>Accumulator for operands and results data</td><td>%eax</td></tr><tr><td>%rbx</td><td>Pointer to data in the data segment</td><td>%ebx</td></tr><tr><td>%rcx</td><td>Counter for string and loop operations</td><td>%ecx</td></tr><tr><td>%rdx</td><td>I/O pointer</td><td>%edx</td></tr><tr><td>%rdi</td><td>Pointer to first data in the segment (memory)</td><td>%edi</td></tr><tr><td>%rsi</td><td>Pointer to last data in the segment (memory)</td><td>%esi</td></tr><tr><td>%rbp</td><td>Pointer to the base of the <em>stack</em></td><td>%ebp</td></tr><tr><td>%rsp</td><td>Pointer to the top of the <em>stack</em></td><td>%esp</td></tr><tr><td>%r8-%r15</td><td>Additional general-purpose registers</td><td>%r8d-%r15d</td></tr><tr><td>%rip</td><td>Instruction pointer (Programm counter)</td><td>%eip</td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="common-instructions">Common Instructions<a href="https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems#common-instructions" class="hash-link" aria-label="Direct link to Common Instructions" title="Direct link to Common Instructions">​</a></h2>
+<ol>
+<li>
+<p>Move Data</p>
+<ul>
+<li><code>mov dest, src</code>: Move data from <code>src</code> to <code>dest</code>.</li>
+<li>Operand Types<!-- -->
+<ul>
+<li>Immediate: Constant value (e.g., <code>$5</code>, <code>$0xFF</code>), start with <code>$</code>.</li>
+<li>Register: Value stored in a register (e.g., <code>%rax</code>, <code>%r13</code>).</li>
+<li>Memory: Value stored in memory (e.g., <code>[RAX]</code>, <code>[RSP+8]</code>).</li>
+<li>Rules 1: No way to move directly from memory to memory.</li>
+<li>Rules 2: No way to move anything to immediate.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><code>mov (%rcx),%rax</code> ; Move the 8 bytes at address in rcx to rax</li>
+<li><code>mov $0x12345678,%rax</code> ; Move the immediate value 0x12345678 to rax</li>
+<li><code>mov %rax,%rbx</code> ; Move the value in rax to rbx</li>
+<li><code>mov %rax,(%rcx)</code> ; Move the value in rax to the address in rcx</li>
+</ul>
+<ol start="2">
+<li>
+<p><code>leaq</code>: Load effective address</p>
+<ul>
+<li><code>leaq dest, src</code>: Load the address of <code>src</code> into <code>dest</code>.</li>
+<li>Example: <code>leaq 8(%rcx), %rax</code> ; Load the address (rcx + 8) into rax</li>
+</ul>
+</li>
+<li>
+<p>Arithmetic and Logic Instructions</p>
+</li>
+</ol>
+<ul>
+<li>
+<p><code>add, sub, imul, xor, and, or</code> etc.</p>
+</li>
+<li>
+<p>Example: <code>add %rbx, %rax</code> ; rax = rax + rbx</p>
+</li>
+<li>
+<p>Shift and logical shift:</p>
+<ul>
+<li><code>sal</code> or <code>shl</code>: Shift left (multiply by 2)</li>
+<li><code>sar</code>: Shift right (divide by 2, signed, arithmetic)</li>
+<li><code>shr</code>: Logical shift right (divide by 2, unsigned)</li>
+<li>Example: <code>shl $3, %rax</code> ; rax = rax * 8</li>
+</ul>
+</li>
+</ul>
+<ol start="4">
+<li>Jumping</li>
+</ol>
+<ul>
+<li><code>jmp label</code>: Unconditional jump to <code>label</code>.</li>
+<li>Conditional jumps based on flags:<!-- -->
+<ul>
+<li><code>je</code> (jump if equal, ZF=1)</li>
+<li><code>jne</code> (jump if not equal, ZF=0)</li>
+<li><code>js</code> (jump if sign, SF=1)</li>
+<li><code>jns</code> (jump if not sign, SF=0)</li>
+<li><code>jl</code> (jump if less, SF != OF)</li>
+<li><code>jle</code> (jump if less or equal, ZF=1 or SF != OF)</li>
+<li><code>jg</code> (jump if greater, ZF=0 and SF == OF)</li>
+<li><code>jge</code> (jump if greater or equal, SF == OF)</li>
+</ul>
+</li>
+<li>Example: <code>je label</code> ; Jump to label if the zero flag is set</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="address-computation">Address computation<a href="https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems#address-computation" class="hash-link" aria-label="Direct link to Address computation" title="Direct link to Address computation">​</a></h2>
+<p>Let say %rdx = 0xf000 and %rcx = 0x0100</p>
+<p>Expressions:</p>
+<ul>
+<li><code>0x8(%rdx)</code>: Address = 0xf000 + 0x8 = 0xf008</li>
+<li><code>(%rdx,%rcx)</code>: Address = 0xf000 + 0x0100 = 0xf100</li>
+<li><code>(%rdx,%rcx,4)</code>: Address = 0xf000 + 0x0100 * 4 = 0xf400</li>
+<li><code>0x10(,%rdx, 2)</code>: Address = 0x10 + 0xf000 * 2 = 0x1e010</li>
+<li><code>0x20(%rdx,%rcx,8)</code>: Address = 0x20 + 0xf000 + 0x0100 * 8 = 0xf820</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="processor-states">Processor states<a href="https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems#processor-states" class="hash-link" aria-label="Direct link to Processor states" title="Direct link to Processor states">​</a></h2>
+<ul>
+<li>Temporary values (%rax, %rbx, etc.)</li>
+<li>Location of runtime stack (i.e., %rsp)</li>
+<li>Location of current code (i.e., %rip)</li>
+<li>Stateus of recent tests (CF, ZF, SF, OF, etc.)<!-- -->
+<ul>
+<li>Carry Flag (CF): Set if an operation generates a carry.</li>
+<li>Zero Flag (ZF): Set if the result of an operation is zero.</li>
+<li>Sign Flag (SF): Set if the result of an operation is negative.</li>
+<li>Overflow Flag (OF): Set if an operation results in a signed overflow.</li>
+<li>Implicitly set by arithmetic and logical instructions. (e.g., <code>add</code>, <code>sub</code>, <code>cmp</code>)</li>
+<li>Not affected by data movement instructions (e.g., <code>mov</code>, <code>lea</code>).</li>
+<li>Explicity set by <code>cmp</code> instruction.<!-- -->
+<ul>
+<li>Let say <code>cmpq b, a</code>, like <code>a-b</code> without setting destination<!-- -->
+<ul>
+<li>CF is set if a &lt; b, ZF is set if a == b, SF is set if a &lt; b (signed), OF is set if overflow occurs (signed).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conditional-move-instructions">Conditional Move Instructions<a href="https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems#conditional-move-instructions" class="hash-link" aria-label="Direct link to Conditional Move Instructions" title="Direct link to Conditional Move Instructions">​</a></h2>
+<p><code>cmoveX dest, src</code>: Move <code>src</code> to <code>dest</code> if condition X is met.</p>
+<ul>
+<li>
+<p>X can be:</p>
+<ul>
+<li><code>e</code>: equal (ZF=1)</li>
+<li><code>ne</code>: not equal (ZF=0)</li>
+<li><code>l</code>: less (SF != OF)</li>
+<li><code>le</code>: less or equal (ZF=1 or SF != OF)</li>
+<li><code>g</code>: greater (ZF=0 and SF == OF)</li>
+<li><code>ge</code>: greater or equal (SF == OF)</li>
+<li><code>s</code>: sign (SF=1)</li>
+<li><code>ns</code>: not sign (SF=0)</li>
+</ul>
+</li>
+<li>
+<p>Example:</p>
+<div class="language-assembly codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-assembly codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">absdiff:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  movq %rdi, %rax      # rax = a</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  subq %rsi, %rax      # rax = a - b</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  movq %rsi, %rdx      # rdx = b</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  subq %rdi, %rdx      # rdx = b - a</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  cmovle %rdx, %rax    # if b - a &gt; 0, rax = a</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ret</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+</ul>
+<ol>
+<li>
+<p>Branching can be expensive due to pipeline stalls.</p>
+</li>
+<li>
+<p>Conditional move instructions can help avoid branches.</p>
+</li>
+<li>
+<p>40 cycles for a mispredicted branch vs. 1 cycle for a conditional move.</p>
+</li>
+<li>
+<p>Bad cases:</p>
+<ol>
+<li>Expensive calculation, e.g., <code>val = t()? hard1(): hard2();</code>.</li>
+<li>Risky computations, e.g., <code>val = p? *p: 0;</code>, as both values are computed.</li>
+<li>With side effects, e.g., <code>val = (p &gt; 0) ? p *= 7 : p += 3;</code>, as both values are computed and <code>p</code> is incremented.</li>
+</ol>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="switch">Switch<a href="https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems#switch" class="hash-link" aria-label="Direct link to Switch" title="Direct link to Switch">​</a></h2>
+<ol>
+<li>
+<p>Implemented with a jump table for dense cases.</p>
+<p>let say</p>
+<div class="language-cpp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-cpp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">switch</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">x</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token keyword" style="color:#00009f">case</span><span class="token plain"> val_0</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    block_0</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">.</span><span class="token punctuation" style="color:#393A34">.</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">etc</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>The assembly code:</p>
+<div class="language-assembly codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-assembly codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">cmpl $val_n, %eax</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ja   default_case           # if x &gt; val_n, jump to default_case (jump above)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">jmp  *.L4(,%rax,8)  # jump to the address in jump_table + x * 8</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># jump_table:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">.section .rodata</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  .align 8</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">.L4:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  .quad case_0</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  .quad case_1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  .quad case_n</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p>Jump table is an array of addresses of the case blocks!!</p>
+</li>
+</ol>
+<h1>Procedures</h1>
+<p>Mechanisms:</p>
+<ol>
+<li>Passing control.</li>
+<li>Passing Data.</li>
+<li>Memory management.</li>
+<li>Mechanism all implemented with machine instructions.</li>
+<li>
+<ul>
+<li>x86-64 implementation of a procedure uses only those mechanisms required.</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="x86-64-stack">x86-64 Stack<a href="https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems#x86-64-stack" class="hash-link" aria-label="Direct link to x86-64 Stack" title="Direct link to x86-64 Stack">​</a></h2>
+<ul>
+<li>
+<p>Region of memory managed with stack discipline (LIFO).</p>
+</li>
+<li>
+<p>Grows toward lower addresses.</p>
+</li>
+<li>
+<p>Register %rsp points to the top of the stack.</p>
+</li>
+<li>
+<p><code>pushq src</code>: Decrement %rsp by 8, then store <code>src</code> at the address in %rsp.</p>
+</li>
+<li>
+<p><code>popq dest</code>: Load the value at the address in %rsp into <code>dest</code>, then increment %rsp by 8. (The original value is still in memory but not in the stack!)</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="control-flow">Control Flow<a href="https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems#control-flow" class="hash-link" aria-label="Direct link to Control Flow" title="Direct link to Control Flow">​</a></h2>
+<ol>
+<li>
+<p>Call instruction</p>
+<ul>
+<li><code>call label</code>: Push the address of the next instruction (return address) onto the stack, then jump to <code>label</code>.</li>
+<li>Example: <code>call foo</code> ; Call the procedure <code>foo</code>.</li>
+</ul>
+</li>
+<li>
+<p>Return instruction</p>
+<ul>
+<li><code>ret</code>: Pop the return address from the stack and jump to that address.</li>
+<li>Example: <code>ret</code> ; Return from the current procedure.</li>
+</ul>
+</li>
+<li>
+<p>Stack Frame</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>Every new function call creates a new stack frame.</p>
+</li>
+<li>
+<p>Stack frame contains:</p>
+<ul>
+<li>Return address</li>
+<li>Base register (%rbp)</li>
+<li>Stack register (%rsp)</li>
+</ul>
+</li>
+<li>
+<p>Recursive functions create multiple stack frames, probably leading to stack overflow!</p>
+</li>
+<li>
+<p>Caller frame vs. Callee frame (Current stack  frame)</p>
+<ul>
+<li>Caller frame: The stack frame of the function that calls another function.</li>
+<li>Callee frame: The stack frame of the function that is called.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="register-saving-convention">Register Saving Convention<a href="https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems#register-saving-convention" class="hash-link" aria-label="Direct link to Register Saving Convention" title="Direct link to Register Saving Convention">​</a></h2>
+<ul>
+<li>Caller-saved registers: %rax, %rcx, %rdx, %rsi, %rdi, %r8-%r11<!-- -->
+<ul>
+<li>Caller must save and restore if it wants to preserve their values across a function call.</li>
+<li>Callee-saved registers: %rbx, %rbp, %r12-%r15<!-- -->
+<ul>
+<li>Callee must save and restore if it uses them.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="x86-64-linux-memory-layout">x86-64 Linux Memory Layout<a href="https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems#x86-64-linux-memory-layout" class="hash-link" aria-label="Direct link to x86-64 Linux Memory Layout" title="Direct link to x86-64 Linux Memory Layout">​</a></h2>
+<ol>
+<li>
+<p>Stack</p>
+<ul>
+<li>Runtime stack (8MB limit), check by <code>limit</code> command!v</li>
+<li>E.g. local variables</li>
+</ul>
+</li>
+<li>
+<p>Heap</p>
+<ul>
+<li>Dynamically allocated memory (e.g., <code>malloc</code>, <code>new</code>)</li>
+</ul>
+</li>
+<li>
+<p>Data</p>
+</li>
+</ol>
+<ul>
+<li>Statically allocated data</li>
+<li>E.g. global variables, <code>static</code> variables</li>
+</ul>
+<ol start="4">
+<li>Text / Shared Library</li>
+</ol>
+<ul>
+<li>Executable machine instructions</li>
+<li>Readonly.</li>
+</ul>
+<div class="language-mermaid codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-mermaid codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">graph TD</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    subgraph Stack</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        direction TB</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        StackTop[High Address]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        StackBottom[Low Address]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    end</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    subgraph Heap</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        direction TB</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        HeapTop[High Address]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        HeapBottom[Low Address]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    end</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    subgraph Data</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        direction TB</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        DataTop[High Address]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        DataBottom[Low Address]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    end</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    subgraph Text</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        direction TB</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        TextTop[High Address]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        TextBottom[Low Address]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    end</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    StackTop --&gt; StackBottom</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    StackBottom --&gt; HeapTop</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    HeapTop --&gt; HeapBottom</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    HeapBottom --&gt; DataTop</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    DataTop --&gt; DataBottom</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    DataBottom --&gt; TextTop</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    TextTop --&gt; TextBottom</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="performance-optimization">Performance Optimization<a href="https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems#performance-optimization" class="hash-link" aria-label="Direct link to Performance Optimization" title="Direct link to Performance Optimization">​</a></h2>
+<ol>
+<li>
+<p>Minimize procedure calls</p>
+<ul>
+<li>Inline small functions.</li>
+<li>Use macros for very small functions.</li>
+</ul>
+</li>
+<li>
+<p>Minimize register saving</p>
+<ul>
+<li>Avoid using callee-saved registers in leaf functions.</li>
+</ul>
+</li>
+<li>
+<p>Shift instead of multiply or divide</p>
+</li>
+</ol>
+<ul>
+<li>Multiply usually need 3 cycles, shift only 1 cycle.</li>
+<li>Addition is also 1 cycle.</li>
+</ul>
+<ol start="4">
+<li>AVX2 / SIMD (Vectorization)</li>
+</ol>
+<ul>
+<li>Single Instruction Multiple Data</li>
+<li>Process multiple data with a single instruction.</li>
+<li>E.g., process 8 integers (32-bit) or 4 doubles (64-bit) in parallel.</li>
+</ul>
+<ol start="5">
+<li>Branches</li>
+</ol>
+<ul>
+<li>Avoid branches when possible.</li>
+<li>Use conditional move instructions to avoid branches.</li>
+<li>Branch prediction: CPU predicts the outcome of a branch to keep the pipeline full.</li>
+<li>Branch Misprediction Recover Penalty: 20-40 cycles.</li>
+<li>Can be a major performance bottleneck.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="summary">Summary<a href="https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2>
+<p>Assembler Control</p>
+<ul>
+<li>Conditional jump</li>
+<li>Conditional move</li>
+<li>Indirect jump (jump table)</li>
+</ul>
+<h1>Memory</h1>
+<ul>
+<li>MMU (Mmory-management unit), a hardware device that maps virtual addresses to physical addresses.</li>
+<li>PTE (Page Table Entry), a data structure used by the MMU to store the mapping between virtual and physical addresses. (L1, L2 cache in the MMU).</li>
+<li>PTA (Page Table Address), the address of the page table in memory.</li>
+<li>PPN (Physical Page Number), the number of a physical page.</li>
+<li>VPN (Virtual Page Number), the number of a virtual page.</li>
+<li>VPO (Virtual Page Offset), the offset within a virtual page.</li>
+<li>PPO (Physical Page Offset), the offset within a physical page.</li>
+</ul>
+<p>Simple Memory System example, TLB(Translation Lookaside Buffer):</p>
+<p>Addressing</p>
+<ul>
+<li>16 bits vertual address space</li>
+<li>12 bits physical address space</li>
+<li>64 kB vertual memory</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="memory-mapping">Memory Mapping<a href="https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems#memory-mapping" class="hash-link" aria-label="Direct link to Memory Mapping" title="Direct link to Memory Mapping">​</a></h2>
+<p>VM areas initialized by associating them with disk objects.</p>
+<ul>
+<li>Virtual Address = VPN * Page Size + VPO</li>
+<li>Physical Address = PPN * Page Size + PPO</li>
+<li>Page Size = 2^n bytes, n is the number of bits for the page offset</li>
+</ul>
+<p>Sometime different process will access the same physical memory, e.g., shared libraries.</p>
+<p>Copy-on-write (COW) Objects: Steps</p>
+<ol>
+<li>Create a new VM area for the new process.</li>
+<li>Map the new VM area to the same disk object as the original process.</li>
+<li>Mark the new VM area as read-only.</li>
+<li>When either process tries to write to the shared page, a page fault occurs.</li>
+<li>The OS allocates a new physical page, copies the contents of the original page to
+the new page, and updates the page table to map the virtual address to the new physical page.</li>
+<li>The write operation is then retried, and it succeeds on the new page.</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dynamic-memory-allocation">Dynamic Memory Allocation<a href="https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems#dynamic-memory-allocation" class="hash-link" aria-label="Direct link to Dynamic Memory Allocation" title="Direct link to Dynamic Memory Allocation">​</a></h2>
+<p>Keep Track of Free Blocks</p>
+<ol>
+<li>Implicit free list</li>
+</ol>
+<ul>
+<li>link all blocks by length</li>
+<li>for each block, need both size and allocation status.<!-- -->
+<ul>
+<li>Could store this information in two words: wasteful.</li>
+<li>standard trick, use the low-order bit of the size word to indicate allocation status.</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>Explicit free list</li>
+</ol>
+<ul>
+<li>Link all "free" blocks</li>
+</ul>
+<ol start="3">
+<li>Segregated free list</li>
+</ol>
+<ul>
+<li>Different free lists for different size classes</li>
+</ul>
+<ol start="4">
+<li>Blocks sorted by size</li>
+</ol>
+<ul>
+<li>Used balanced tree (red-black tree).</li>
+</ul>]]></content>
+        <author>
+            <name>Hinny Tsang</name>
+            <uri>https://github.com/HinnyTsang</uri>
+        </author>
+        <category label="C++" term="C++"/>
+        <category label="Computer Science" term="Computer Science"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Networkings]]></title>
+        <id>https://www.my-universe.hinnytsang.com/knowledge-base/networkings</id>
+        <link href="https://www.my-universe.hinnytsang.com/knowledge-base/networkings"/>
+        <updated>2025-09-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Notes on Networkings, OSI model, TCP/IP, UDP, Sockets, etc.]]></summary>
+        <content type="html"><![CDATA[<p>Notes on Networkings, OSI model, TCP/IP, UDP, Sockets, etc.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="osi-model">OSI Model<a href="https://www.my-universe.hinnytsang.com/knowledge-base/networkings#osi-model" class="hash-link" aria-label="Direct link to OSI Model" title="Direct link to OSI Model">​</a></h2>
+<p>The OSI (Open Systems Interconnection) model is a conceptual framework used to understand and implement network protocols in seven layers. Each layer serves a specific function and communicates with the layers directly above and below it. The seven layers of the OSI model are:</p>
+<table><thead><tr><th>Layer</th><th>Name</th><th>Protocol</th><th>Function</th><th>TCP/IP Model</th></tr></thead><tbody><tr><td>7</td><td>Application</td><td>HTTP, FTP, SMTP</td><td>Provides network services directly to user</td><td>Application</td></tr><tr><td>6</td><td>Presentation</td><td>SSL, TLS</td><td>Translates data formats, encryption, compression</td><td>Application</td></tr><tr><td>5</td><td>Session</td><td>NetBIOS, PPTP</td><td>Manages sessions between applications</td><td>Application</td></tr><tr><td>4</td><td>Transport</td><td>TCP, UDP</td><td>Host to host, flow control</td><td>Transport</td></tr><tr><td>3</td><td>Network</td><td>IP, ICMP</td><td>Determines how data is sent to the</td><td>Internet</td></tr><tr><td>2</td><td>Data Link</td><td>Ethernet, PPP</td><td>Handles error detection and correction from the physical layer</td><td>Network Access</td></tr><tr><td>1</td><td>Physical</td><td>Ethernet, Wi-Fi</td><td>Transmits raw bit stream over the</td><td>Network Access</td></tr></tbody></table>
+<p><img decoding="async" loading="lazy" alt="Example" src="https://www.my-universe.hinnytsang.com/knowledge-base/assets/images/osi-model-4626589e55bbf92f93373749fcd51a19.webp" width="823" height="577" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fix-protocol">FIX protocol<a href="https://www.my-universe.hinnytsang.com/knowledge-base/networkings#fix-protocol" class="hash-link" aria-label="Direct link to FIX protocol" title="Direct link to FIX protocol">​</a></h2>
+<p>The Financial Information eXchange (FIX) protocol is an electronic communications protocol initiated in 1992 for international real-time exchange of information related to securities transactions and markets.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="format">Format<a href="https://www.my-universe.hinnytsang.com/knowledge-base/networkings#format" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format">​</a></h3>
+<p>A FIX message is a series of key-value pairs, where each key is a tag number and the value is the corresponding data. Below is an example of a simple FIX message:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">8=FIX.4.2|9=176|35=D|49=CLIENT12|56=BROKER12|34=215|52=20100225-19:41:57.316|11=12345|21=1|55=IBM|54=1|60=20100225-19:41:57.316|38=100|40=2|44=150.25|59=0|10=128|</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>In this example, each key-value pair is separated by a pipe (<code>|</code>) character. The tags represent different fields in the FIX protocol, such as:</p>
+<ul>
+<li><code>8</code>: Begin String</li>
+<li><code>9</code>: Body Length</li>
+<li><code>35</code>: Message Type</li>
+<li><code>49</code>: SenderCompID</li>
+<li><code>56</code>: TargetCompID</li>
+<li><code>34</code>: MsgSeqNum</li>
+<li><code>52</code>: SendingTime</li>
+<li><code>11</code>: ClOrdID</li>
+<li><code>10</code>: CheckSum</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-message-types">Common Message Types<a href="https://www.my-universe.hinnytsang.com/knowledge-base/networkings#common-message-types" class="hash-link" aria-label="Direct link to Common Message Types" title="Direct link to Common Message Types">​</a></h3>
+<ul>
+<li><code>D</code>: New Order - Single</li>
+<li><code>8</code>: Execution Report</li>
+<li><code>F</code>: Order Cancel Request</li>
+<li><code>9</code>: Order Cancel/Replace Request</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sbe-simple-binary-encoding">SBE (Simple Binary Encoding)<a href="https://www.my-universe.hinnytsang.com/knowledge-base/networkings#sbe-simple-binary-encoding" class="hash-link" aria-label="Direct link to SBE (Simple Binary Encoding)" title="Direct link to SBE (Simple Binary Encoding)">​</a></h3>
+<p>SBE is a binary encoding format designed for high-performance messaging in financial systems. It is used to encode FIX messages in a more compact and efficient manner, reducing latency and improving throughput.</p>
+<p>Example of SBE:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">// Example SBE message structure</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">struct Order {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    uint32_t orderId;      // 4 bytes</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    char symbol[8];        // 8 bytes</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    char side;             // 1 byte (B for Buy, S for Sell)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    uint32_t quantity;     // 4 bytes</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    double price;          // 8 bytes</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">};</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>This structure represents a simple order message with fields for order ID, symbol, side (buy/sell), quantity, and price. The total size of this message would be 25 bytes, making it much more efficient than a text-based FIX message.</p>
+<p>Pro and Cons of SBE:</p>
+<ul>
+<li>Pros:<!-- -->
+<ul>
+<li>Reduced message size</li>
+<li>Lower latency</li>
+<li>Higher throughput</li>
+</ul>
+</li>
+<li>Cons:<!-- -->
+<ul>
+<li>More complex to implement</li>
+<li>Less human-readable</li>
+<li>Requires schema management</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="protocol-buffers">Protocol Buffers<a href="https://www.my-universe.hinnytsang.com/knowledge-base/networkings#protocol-buffers" class="hash-link" aria-label="Direct link to Protocol Buffers" title="Direct link to Protocol Buffers">​</a></h2>
+<p>Protocol Buffers (Protobuf) is a language-neutral, platform-neutral, extensible mechanism for serializing structured data. It is used to define how data should be structured and provides a way to encode and decode this data efficiently.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="kernel-bypass">Kernel Bypass<a href="https://www.my-universe.hinnytsang.com/knowledge-base/networkings#kernel-bypass" class="hash-link" aria-label="Direct link to Kernel Bypass" title="Direct link to Kernel Bypass">​</a></h2>
+<p>Kernel bypass is a technique used to improve the performance of network applications by allowing user-space applications to access hardware resources directly, bypassing the operating system kernel. This reduces the overhead associated with context switching and system calls, leading to lower latency and higher throughput.</p>
+<p>Benefit of kernel bypass:</p>
+<ul>
+<li>Ultra-low latency</li>
+<li>Reduced CPU overhead</li>
+<li>Greater control over network resources</li>
+</ul>
+<p>Without kernel bypass, the application interact with the network driver through the following</p>
+<div class="language-mermaid codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-mermaid codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">graph TD</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    subgraph User Space</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        App[Application]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    end</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    subgraph Kernel Space</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        TCPIP[TCP/IP Stack]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        TUNTAP[TUN/TAP Driver]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    end</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    subgraph Hardware</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        NIC[Network Interface Card]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    end</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    App --&gt;|System Call| TCPIP</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    TCPIP --&gt;|System Call| TUNTAP</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    TUNTAP --&gt;|DMA| NIC</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<ul>
+<li>TUN is for IP packets (Layer 3)</li>
+<li>TAP is for Ethernet frames (Layer 2)</li>
+<li>TCP (Layer 4) and UDP (Layer 4) are handled in the kernel space</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-technologies">Key Technologies<a href="https://www.my-universe.hinnytsang.com/knowledge-base/networkings#key-technologies" class="hash-link" aria-label="Direct link to Key Technologies" title="Direct link to Key Technologies">​</a></h3>
+<ol>
+<li>
+<p>DPDK (Data Plane Development Kit)</p>
+<ul>
+<li>A set of libraries and drivers for fast packet processing in user space.</li>
+<li>Provides poll-mode drivers that allow applications to directly access the NIC.</li>
+</ul>
+</li>
+<li>
+<p>PF_RING ZC (Zero Copy)</p>
+<ul>
+<li>A high-speed packet capture library that enables zero-copy packet processing.</li>
+<li>Allows applications to receive packets directly from the NIC without copying them to kernel space.</li>
+</ul>
+</li>
+<li>
+<p>RDMA (Remote Direct Memory Access)</p>
+<ul>
+<li>Allows direct memory access from the memory of one computer into that of another without involving either one's operating system.</li>
+<li>Used in high-performance computing and low-latency networking.</li>
+<li>Bypass TCP/IP stack.</li>
+</ul>
+</li>
+<li>
+<p>Solarflare / OpenOnload</p>
+<ul>
+<li>A high-performance network stack that runs in user space.</li>
+<li>Provides low-latency and high-throughput networking by bypassing the kernel.</li>
+</ul>
+</li>
+<li>
+<p>Netmap</p>
+</li>
+<li>
+<p>eBPF / XDP (Extended Berkeley Packet Filter / eXpress Data Path)</p>
+</li>
+</ol>]]></content>
+        <author>
+            <name>Hinny Tsang</name>
+            <uri>https://github.com/HinnyTsang</uri>
+        </author>
+        <category label="C++" term="C++"/>
+        <category label="Computer Science" term="Computer Science"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Crypto Catchup]]></title>
         <id>https://www.my-universe.hinnytsang.com/knowledge-base/crypto-catchup</id>
@@ -135,6 +664,124 @@
             <uri>https://github.com/HinnyTsang</uri>
         </author>
         <category label="Cryptocurrency" term="Cryptocurrency"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Exchange Engineering]]></title>
+        <id>https://www.my-universe.hinnytsang.com/knowledge-base/exchange-engineering</id>
+        <link href="https://www.my-universe.hinnytsang.com/knowledge-base/exchange-engineering"/>
+        <updated>2025-09-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Notes on YouTube video How to Build an Exchange by Jane Street.]]></summary>
+        <content type="html"><![CDATA[<p>Notes on YouTube video <a href="https://www.youtube.com/watch?v=b1e4t2k2KJY" target="_blank" rel="noopener noreferrer">How to Build an Exchange</a> by Jane Street.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="difficulties">Difficulties<a href="https://www.my-universe.hinnytsang.com/knowledge-base/exchange-engineering#difficulties" class="hash-link" aria-label="Direct link to Difficulties" title="Direct link to Difficulties">​</a></h2>
+<ol>
+<li>High transaction rates (Scale)</li>
+<li>Low, deterministic latency</li>
+<li>Fairness</li>
+<li>Reliability</li>
+<li>Durability</li>
+<li>Robustness to bad clients</li>
+</ol>
+<p>Speaker built a crossing engine to handle messages of 500k/sec with ~1ms latency.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="simple-design">Simple Design<a href="https://www.my-universe.hinnytsang.com/knowledge-base/exchange-engineering#simple-design" class="hash-link" aria-label="Direct link to Simple Design" title="Direct link to Simple Design">​</a></h2>
+<div class="language-mermaid codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-mermaid codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">flowchart TD</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">MatchEngine[Match Engine] --&gt; Port1[Port 1]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">MatchEngine[Match Engine] --&gt; Port2[Port 2]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">MatchEngine[Match Engine] --&gt; Port3[Port 3]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Port1 --&gt; Cloud((Somethings))</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Port2 --&gt; Cloud</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Port3 --&gt; Cloud</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Cloud --&gt; Client[Client 1]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Cloud --&gt; Client2[Client 2]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Cloud --&gt; Client3[Client 3]</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Boardcast by udp to ensure low latency. However, udp is unreliable and can drop packets.</p>
+<p>Hence, we add a lager of resenter (RT).</p>
+<ul>
+<li>Everyone gets every message</li>
+<li>One-in-flight, latency determines throughput</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="matching-algorithm">Matching algorithm<a href="https://www.my-universe.hinnytsang.com/knowledge-base/exchange-engineering#matching-algorithm" class="hash-link" aria-label="Direct link to Matching algorithm" title="Direct link to Matching algorithm">​</a></h2>
+<ol>
+<li>FIFO</li>
+<li>TOP: people with best price and shares above threshold get priority.</li>
+<li>Pro-Rata</li>
+<li>Lead market maker</li>
+</ol>
+<h1>Low Latency Related</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="real-contract-template">Real Contract Template<a href="https://www.my-universe.hinnytsang.com/knowledge-base/exchange-engineering#real-contract-template" class="hash-link" aria-label="Direct link to Real Contract Template" title="Direct link to Real Contract Template">​</a></h2>
+<ol>
+<li>Specific activity A</li>
+<li>When run as part of System S</li>
+<li>Throughtput X events / second</li>
+<li>Duration time T</li>
+<li>Hardware H, OS configuration O</li>
+<li>Latency L @ percentile P</li>
+<li>Coordinated ommission</li>
+<li>Timing policy</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="microsecond-requiires">Microsecond Requiires<a href="https://www.my-universe.hinnytsang.com/knowledge-base/exchange-engineering#microsecond-requiires" class="hash-link" aria-label="Direct link to Microsecond Requiires" title="Direct link to Microsecond Requiires">​</a></h2>
+<ol>
+<li>
+<p>Shared memory</p>
+<ul>
+<li>Chronicle Queue: 50th %ile 0.5us</li>
+<li>Aeron: 50th %ile 0.25us</li>
+<li>Single trips in ~100ns</li>
+</ul>
+</li>
+<li>
+<p>Single threaded</p>
+<ul>
+<li>No synchronization</li>
+<li>No complicated object pooling strategies</li>
+<li>Scale out by partitioning your data and adding more microservices</li>
+</ul>
+</li>
+<li>
+<p>Hog the CPU and CPI pin</p>
+</li>
+<li>
+<p>Record all inputs and output.</p>
+<ul>
+<li>Reproduce bugs</li>
+<li>Measure latency</li>
+<li>Replay is especially important</li>
+</ul>
+</li>
+<li>
+<p>Map your microservices onto your hardware.</p>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hardest-areas">Hardest areas<a href="https://www.my-universe.hinnytsang.com/knowledge-base/exchange-engineering#hardest-areas" class="hash-link" aria-label="Direct link to Hardest areas" title="Direct link to Hardest areas">​</a></h2>
+<ul>
+<li>
+<p>Wait free (off heap) data structures, you know the cpu cycles required</p>
+</li>
+<li>
+<p>Resilience / High Availability</p>
+</li>
+<li>
+<p>Failover / hot-hot</p>
+</li>
+</ul>]]></content>
+        <author>
+            <name>Hinny Tsang</name>
+            <uri>https://github.com/HinnyTsang</uri>
+        </author>
+        <category label="C++" term="C++"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C++ Primitive Types]]></title>
+        <id>https://www.my-universe.hinnytsang.com/knowledge-base/cpp-primitive</id>
+        <link href="https://www.my-universe.hinnytsang.com/knowledge-base/cpp-primitive"/>
+        <updated>2025-09-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Notes on C++ Primitive Types.]]></summary>
+        <content type="html"><![CDATA[<p>Notes on C++ Primitive Types.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="primitive-types">Primitive Types<a href="https://www.my-universe.hinnytsang.com/knowledge-base/cpp-primitive#primitive-types" class="hash-link" aria-label="Direct link to Primitive Types" title="Direct link to Primitive Types">​</a></h2>
+<ul>
+<li><code>char</code>: 1 byte, typically used for characters.</li>
+<li><code>short</code>: 2 bytes, used for small integers.</li>
+<li><code>int</code>: 4 bytes, used for integers. (2 bytes on some systems)</li>
+<li><code>float</code>: 4 bytes, used for floating-point numbers.</li>
+<li><code>double</code>: 8 bytes, used for double-precision floating-point numbers.</li>
+<li><code>bool</code>: 1 byte, used for boolean values (true or false).</li>
+<li><code>long int</code>: 8-bytes on 64-bit systems, 4-bytes on 32-bit systems.</li>
+</ul>]]></content>
+        <author>
+            <name>Hinny Tsang</name>
+            <uri>https://github.com/HinnyTsang</uri>
+        </author>
+        <category label="C++" term="C++"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[C++ Standard Library]]></title>
