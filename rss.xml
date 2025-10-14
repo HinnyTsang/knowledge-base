@@ -4,10 +4,57 @@
         <title>Knowledge Base Blog</title>
         <link>https://www.my-universe.hinnytsang.com/knowledge-base</link>
         <description>Knowledge Base Blog</description>
-        <lastBuildDate>Wed, 01 Oct 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 14 Oct 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Notes on Rust]]></title>
+            <link>https://www.my-universe.hinnytsang.com/knowledge-base/rusty</link>
+            <guid>https://www.my-universe.hinnytsang.com/knowledge-base/rusty</guid>
+            <pubDate>Tue, 14 Oct 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Some notes for the rust programming language.]]></description>
+            <content:encoded><![CDATA[<p>Some notes for the rust programming language.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="lifetimes">Lifetimes<a href="https://www.my-universe.hinnytsang.com/knowledge-base/rusty#lifetimes" class="hash-link" aria-label="Direct link to Lifetimes" title="Direct link to Lifetimes">​</a></h2>
+<p>The three rules</p>
+<ol>
+<li>Compiler assigns a lifetime parameter to each parameter that is a reference.</li>
+<li>If there is exactly one input lifetime parameter, that lifetime is assigned to all output lifetime parameters.</li>
+<li>If <code>&amp;self</code> or <code>&amp;mut self</code> is one of the input lifetime parameters, the lifetime of <code>self</code> is assigned to all output lifetime parameters.</li>
+</ol>
+<ul>
+<li><code>'static</code>: Static Lifetime denotes that the reference can live for the entire duration of the program.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tests">Tests<a href="https://www.my-universe.hinnytsang.com/knowledge-base/rusty#tests" class="hash-link" aria-label="Direct link to Tests" title="Direct link to Tests">​</a></h2>
+<p>Should know:</p>
+<ul>
+<li><code>#[cfg(test)]</code>: module only compiled when running tests</li>
+<li><code>#[test]</code>: function is a test function</li>
+<li><code>cargo test</code>: run tests<!-- -->
+<ul>
+<li><code>cargo test -- --test-threads=1</code> to run tests in single thread</li>
+<li><code>cargo test &lt;test_name&gt;</code> to run specific test</li>
+<li><code>cargo test -- --show-output</code> to show output of passing tests</li>
+<li><code>cargo test -- --ignored</code> to run ignored tests</li>
+</ul>
+</li>
+<li><code>assert!</code>, <code>assert_eq!</code>, <code>assert_ne!</code>: macros to check if conditions are met</li>
+<li><code>#[should_panic]</code>: test should panic to pass, e.g.<!-- -->
+<div class="language-rust codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-rust codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token attribute attr-name" style="color:#00a4db">#[test]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token attribute attr-name" style="color:#00a4db">#[should_panic]</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic">// Or #[should_panic(expected = "divide by zero")] to check panic message</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">fn</span><span class="token plain"> </span><span class="token function-definition function" style="color:#d73a49">test_divide_by_zero</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">let</span><span class="token plain"> _ </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">1</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">/</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">0</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li><code>Result&lt;T, E&gt;</code>: test can return a Result type instead of using assert macros, but can't use with <code>#[should_panic]</code>.</li>
+<li><code>ignore</code> attribute to ignore specific tests, use after <code>#[test]</code></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="closure">Closure<a href="https://www.my-universe.hinnytsang.com/knowledge-base/rusty#closure" class="hash-link" aria-label="Direct link to Closure" title="Direct link to Closure">​</a></h2>
+<p>Closure will automically implment 1, 2, or all of the following traits:</p>
+<ul>
+<li><code>Fn</code>: closure only borrows values from the environment immutably</li>
+<li><code>FnMut</code>: closure borrows values from the environment mutably</li>
+<li><code>FnOnce</code>: closure takes ownership of values from the environment (<code>move</code> keyword)</li>
+</ul>]]></content:encoded>
+            <category>rust</category>
+            <category>Computer Science</category>
+        </item>
         <item>
             <title><![CDATA[Operating Systems]]></title>
             <link>https://www.my-universe.hinnytsang.com/knowledge-base/operating-systems</link>
