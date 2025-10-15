@@ -257,7 +257,53 @@
 <li><code>Weak&lt;T&gt;</code>: non-owning reference to <code>Rc&lt;T&gt;</code>, prevents reference cycles, created using <code>Rc::downgrade(&amp;rc)</code>.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="interior-mutability">Interior Mutability<a href="https://www.my-universe.hinnytsang.com/knowledge-base/rusty#interior-mutability" class="hash-link" aria-label="Direct link to Interior Mutability" title="Direct link to Interior Mutability">​</a></h2>
-<p>Rust enforces borrowing rules at compile time. While it may reject safe code that violates these rules, interior mutability is a way to check these rules at runtime.</p>]]></content>
+<p>Rust enforces borrowing rules at compile time. While it may reject safe code that violates these rules, interior mutability is a way to check these rules at runtime.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="concurrency">Concurrency<a href="https://www.my-universe.hinnytsang.com/knowledge-base/rusty#concurrency" class="hash-link" aria-label="Direct link to Concurrency" title="Direct link to Concurrency">​</a></h2>
+<ul>
+<li><code>Arc&lt;T&gt;</code>: Atomic Reference Counted, thread-safe version of <code>Rc&lt;T&gt;</code>.</li>
+<li><code>Mutex&lt;T&gt;</code>: Mutual Exclusion, provides interior mutability with locking mechanism for thread safety.</li>
+<li><code>RwLock&lt;T&gt;</code>: Read-Write Lock, allows multiple readers or one writer at a time, useful for read-heavy scenarios.</li>
+</ul>
+<p>Threads can be spawned using <code>std::thread::spawn</code> and can be joined using the <code>join</code> method on the thread handle.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="send-and-sync-traits">Send and Sync Traits<a href="https://www.my-universe.hinnytsang.com/knowledge-base/rusty#send-and-sync-traits" class="hash-link" aria-label="Direct link to Send and Sync Traits" title="Direct link to Send and Sync Traits">​</a></h3>
+<ul>
+<li><code>Send</code>: Transfer ownership to another thread.</li>
+<li><code>Sync</code>: Allow references to be shared between multiple threads.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="async-tasks">Async tasks<a href="https://www.my-universe.hinnytsang.com/knowledge-base/rusty#async-tasks" class="hash-link" aria-label="Direct link to Async tasks" title="Direct link to Async tasks">​</a></h3>
+<p>The rust book introduced <code>trpl</code> library for async programming, below are some common uses:</p>
+<ul>
+<li>
+<p><code>trpl::spawn_task(future)</code>: spawn a new async task.</p>
+</li>
+<li>
+<p><code>trpl::join(futures, future2)</code>: wait for two futures to complete.</p>
+</li>
+<li>
+<p><code>trpl::join!(...futures)</code>: wait for multiple futures to complete.</p>
+</li>
+<li>
+<p><code>trpl::race(future1, futures2)</code>: wait for the first future to complete.</p>
+</li>
+<li>
+<p><code>trpl::channel</code>: create a channel for communication between tasks (mpsc, async).</p>
+</li>
+<li>
+<p>Streams:</p>
+<ul>
+<li><code>trpl::stream_from_iter(iter)</code>: create a stream from an iterator.</li>
+<li><code>trpl::ReceiverStream(rx)</code>: create a stream from a receiver.</li>
+</ul>
+</li>
+</ul>
+<p>Create futures</p>
+<div class="language-rust codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-rust codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">let</span><span class="token plain"> my_future </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">async</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token comment" style="color:#999988;font-style:italic">// async code here</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">let</span><span class="token plain"> my_future_with_move </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">async</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">move</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token comment" style="color:#999988;font-style:italic">// async code here</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">my_future</span><span class="token punctuation" style="color:#393A34">.</span><span class="token keyword" style="color:#00009f">await</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pin-for-futures">Pin for futures<a href="https://www.my-universe.hinnytsang.com/knowledge-base/rusty#pin-for-futures" class="hash-link" aria-label="Direct link to Pin for futures" title="Direct link to Pin for futures">​</a></h2>
+<p>Unlike other types, futures may be self-referential, meaning they can contain references to themselves. This can lead to issues when the future is moved in memory, as the references may become invalid.</p>
+<p>To address this, Rust provides the <code>Pin</code> type, which prevents a value from being moved once it has been pinned. This is particularly useful for futures, as it ensures that the self-referential parts of the future remain valid for the duration of its execution.</p>
+<p><code>Unpin</code> and <code>!Unpin</code>:</p>
+<p>By default, most types in Rust implement the <code>Unpin</code> trait, which means they can be safely moved in memory. However, some types, such as certain futures or self-referential structs, do not implement <code>Unpin</code> and are considered <code>!Unpin</code>. These types must be pinned to ensure their memory location remains stable.</p>
+<p>When working with futures that are <code>!Unpin</code>, you typically use <code>Pin&lt;Box&lt;dyn Future&lt;Output = T&gt;&gt;&gt;</code> or <code>Pin&lt;&amp;mut dyn Future&lt;Output = T&gt;&gt;</code> to pin them in place. This ensures that the future can be safely polled without the risk of invalidating any self-references.</p>]]></content>
         <author>
             <name>Hinny Tsang</name>
             <uri>https://github.com/HinnyTsang</uri>
