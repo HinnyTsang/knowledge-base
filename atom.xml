@@ -2,11 +2,355 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.my-universe.hinnytsang.com/knowledge-base</id>
     <title>Knowledge Base Blog</title>
-    <updated>2025-10-15T00:00:00.000Z</updated>
+    <updated>2025-11-21T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.my-universe.hinnytsang.com/knowledge-base"/>
     <subtitle>Knowledge Base Blog</subtitle>
     <icon>https://www.my-universe.hinnytsang.com/knowledge-base/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Correlation]]></title>
+        <id>https://www.my-universe.hinnytsang.com/knowledge-base/correlation</id>
+        <link href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation"/>
+        <updated>2025-11-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Notes on module 6.]]></summary>
+        <content type="html"><![CDATA[<p>Notes on module 6.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-balance-sheet-leverage-and-default">The Balance Sheet: Leverage and Default<a href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation#the-balance-sheet-leverage-and-default" class="hash-link" aria-label="Direct link to The Balance Sheet: Leverage and Default" title="Direct link to The Balance Sheet: Leverage and Default">​</a></h2>
+<p>The balance sheet for a person or a company shows their financial position at a specific point in time. It consists of three main components: assets, liabilities, and equity, the relation is given by the fundemental accounting equation:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>s</mi><mi>s</mi><mi>e</mi><mi>t</mi><mi>s</mi><mo>=</mo><mi>L</mi><mi>i</mi><mi>a</mi><mi>b</mi><mi>i</mi><mi>l</mi><mi>i</mi><mi>t</mi><mi>i</mi><mi>e</mi><mi>s</mi><mo>+</mo><mi>E</mi><mi>q</mi><mi>u</mi><mi>i</mi><mi>t</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">Assets = Liabilities + Equity
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em"></span><span class="mord mathnormal">A</span><span class="mord mathnormal">sse</span><span class="mord mathnormal">t</span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em"></span><span class="mord mathnormal">L</span><span class="mord mathnormal">iabi</span><span class="mord mathnormal" style="margin-right:0.01968em">l</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span><span class="mord mathnormal">i</span><span class="mord mathnormal">es</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em"></span><span class="mord mathnormal" style="margin-right:0.03588em">Eq</span><span class="mord mathnormal">u</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.03588em">y</span></span></span></span></span>
+<p>Where:</p>
+<ul>
+<li>Assets: e.g. cash, house, car, investments, etc.</li>
+<li>Liabilities: e.g. mortgage, loans, credit card debt, etc.</li>
+<li>Equity: Assets - Liabilities / net worth / owner's equity.</li>
+</ul>
+<p>Let's say I have 150k before buying a house, and I buy a house for 500k with a mortgage of 400k. Before, I have cash only.</p>
+<ul>
+<li>Assets: 150k(Cash)</li>
+<li>Liabilities: 0</li>
+<li>Equity: 150k</li>
+</ul>
+<p>After:</p>
+<p>I have a house worth 500k, a mortgage of 400k, and cash of 150k - 100k = 50k.</p>
+<ul>
+<li>Assets: 500k(House) + 50k(Cash) = 550k</li>
+<li>Liabilities: 400k(Mortgage)</li>
+<li>Equity: 550k - 400k = 150k</li>
+</ul>
+<p>Examples of elements on a balance sheet for a bank:</p>
+<table><thead><tr><th>element</th><th>class</th></tr></thead><tbody><tr><td>Cash</td><td>Asset</td></tr><tr><td>Loan to customer</td><td>Asset</td></tr><tr><td>Mortgage to customer</td><td>Asset</td></tr><tr><td>Deposit from customer</td><td>Liability</td></tr><tr><td>Bank Capital</td><td>Equity</td></tr><tr><td>Capital reserve</td><td>Equity</td></tr><tr><td>Reserves for Bad Loans</td><td>Asset</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="measuring-leverage-with-equity-multiplier">Measuring Leverage with Equity Multiplier<a href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation#measuring-leverage-with-equity-multiplier" class="hash-link" aria-label="Direct link to Measuring Leverage with Equity Multiplier" title="Direct link to Measuring Leverage with Equity Multiplier">​</a></h3>
+<p>The equity multiplier (EM) is a measure of financial leverage, calculated as:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>E</mi><mi>M</mi><mo>=</mo><mfrac><mrow><mi>A</mi><mi>s</mi><mi>s</mi><mi>e</mi><mi>t</mi><mi>s</mi></mrow><mrow><mi>E</mi><mi>q</mi><mi>u</mi><mi>i</mi><mi>t</mi><mi>y</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">EM = \frac{Assets}{Equity}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em"></span><span class="mord mathnormal" style="margin-right:0.10903em">EM</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:2.2408em;vertical-align:-0.8804em"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em">Eq</span><span class="mord mathnormal">u</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.03588em">y</span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord mathnormal">A</span><span class="mord mathnormal">sse</span><span class="mord mathnormal">t</span><span class="mord mathnormal">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="model-failure-and-crises">Model Failure and Crises<a href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation#model-failure-and-crises" class="hash-link" aria-label="Direct link to Model Failure and Crises" title="Direct link to Model Failure and Crises">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-rent-or-own">1. Rent or Own?<a href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation#1-rent-or-own" class="hash-link" aria-label="Direct link to 1. Rent or Own?" title="Direct link to 1. Rent or Own?">​</a></h3>
+<ol>
+<li>
+<p>Depends on country of live, UK ~ 44% rent, US ~ 37% rent, but China around 14% rent.</p>
+</li>
+<li>
+<p>Depends on individual's situation.</p>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-developers-and-landlords">2. Developers and Landlords<a href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation#2-developers-and-landlords" class="hash-link" aria-label="Direct link to 2. Developers and Landlords" title="Direct link to 2. Developers and Landlords">​</a></h3>
+<ul>
+<li>Landlords profit by processing real estates.</li>
+<li>Developers profit by creating real estates.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-the-costs-of-development-and-how-to-finance-them">3. The Costs of Development and How to Finance Them<a href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation#3-the-costs-of-development-and-how-to-finance-them" class="hash-link" aria-label="Direct link to 3. The Costs of Development and How to Finance Them" title="Direct link to 3. The Costs of Development and How to Finance Them">​</a></h3>
+<p>Readings <a href="https://archive.strongtowns.org/journal/2020/9/15/6-things-to-know-about-development" target="_blank" rel="noopener noreferrer">6 Things to Know About How Development Works</a></p>
+<ol>
+<li>
+<p>Developer is a broader category than you think.</p>
+</li>
+<li>
+<p>The cost of building sets the floor under the price of a brand new home, the cost for a new home includes:</p>
+<ul>
+<li>Profit / ROI</li>
+<li>Finance</li>
+<li>Construction</li>
+<li>Land</li>
+<li>Tax, Title, Insurence</li>
+<li>Fees
+Hence, for 2nd hand homes, the price should be lower than brand new homes. (at lease no Profit)</li>
+</ul>
+</li>
+<li>
+<p>Even non-profit developers have a floor unless subsidized.</p>
+</li>
+<li>
+<p>The rent on new apartments pays the cost of building them, it must cover the following items:</p>
+<ul>
+<li>Operating expenses</li>
+<li>Debt service</li>
+<li>Capital reserves</li>
+<li>A dept coverage raatio.</li>
+</ul>
+</li>
+<li>
+<p>The price of land depends heavily on its development potential.</p>
+</li>
+</ol>
+<p>The Developer's balance sheet:</p>
+<ol>
+<li>Liabilities</li>
+</ol>
+<ul>
+<li>issue bonds</li>
+<li>take loans from banks, etc.</li>
+</ul>
+<ol start="2">
+<li>Equity</li>
+</ol>
+<ul>
+<li>sell ownership stack by issuing shares.</li>
+<li>REITs (Real Estate Investment Trusts, a company that owns, operates, or finances income-producing real estate.)</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-housing-finance-problem-and-its-solutions">The Housing Finance Problem and its Solutions<a href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation#the-housing-finance-problem-and-its-solutions" class="hash-link" aria-label="Direct link to The Housing Finance Problem and its Solutions" title="Direct link to The Housing Finance Problem and its Solutions">​</a></h2>
+<p>Housing Microfinance (HMF)</p>
+<ul>
+<li>
+<p>Provides small loans to low-income households or individuals who lack access to traditional banking services, enabling them to improve their housing conditions.</p>
+</li>
+<li>
+<p>What are the main driver of market growth of HMF?</p>
+<ul>
+<li>Rising urbanization and housing demand in developing countries.</li>
+<li>Increasing awareness about HMF services.</li>
+<li>Supportive government policies and initiatives.</li>
+</ul>
+</li>
+<li>
+<p>What are the main constraints to market growth of HMF?</p>
+<ul>
+<li>Limited access to funding for HMF providers.</li>
+<li>High operational costs and risks associated with lending to low-income borrowers.</li>
+<li>Lack of awareness and understanding of HMF products among potential clients.</li>
+</ul>
+</li>
+</ul>
+<p>Contracual savings for housing (CSH)</p>
+<ul>
+<li>
+<p>Financial institutions that collect regular savings from individuals and provide them with affordable housing loans.</p>
+</li>
+<li>
+<p>Difference between open and closed CSH?</p>
+<ul>
+<li>Open CSH: allow members to join and leave freely, providing flexibility.</li>
+<li>Closed CSH: have a fixed membership, often tied to specific organizations or communities.</li>
+</ul>
+</li>
+<li>
+<p>How CSH minimize credit risk?</p>
+<ul>
+<li>Creditworthiness of members before granting loans.</li>
+<li>Strict repayment schedules and monitoring mechanisms.</li>
+<li>Encouraging savings habits among members.</li>
+</ul>
+</li>
+<li>
+<p>Main challenges?</p>
+</li>
+</ul>
+<p>Housing bonds</p>
+<ul>
+<li>Debt securities issued by governments or financial institutions to raise funds for housing projects.</li>
+</ul>
+<p>Mortgage liquidity facilities (MLF)</p>
+<ul>
+<li>Financial mechanisms that provide liquidity to mortgage lenders, enabling them to offer more loans to homebuyers.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="reits-vs-reocs">REITs vs REOCs<a href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation#reits-vs-reocs" class="hash-link" aria-label="Direct link to REITs vs REOCs" title="Direct link to REITs vs REOCs">​</a></h2>
+<p>Both REITs (Real Estate Investment Trusts) and REOCs (Real Estate Operating Companies):</p>
+<ul>
+<li>Primarily own residential real estate.</li>
+<li>Derive most of their income from rent or property sale.</li>
+<li>Are publicly listed on an exchange.</li>
+<li>Eliminate the hassle of actually owning, letting, and managing properties yourself.</li>
+<li>Allow even small investors to buy a slice of the income generated by a number of different properties.</li>
+</ul>
+<p>The main difference is:</p>
+<table><thead><tr><th>REITs</th><th>REOCs</th></tr></thead><tbody><tr><td>Distribute at least 90% of taxable income as dividends to shareholders</td><td>Can retain earnings for growth and development</td></tr><tr><td>Benefit from special tax treatment, avoiding corporate income tax</td><td>Subject to corporate income tax on profits</td></tr><tr><td>Shareholders pay taxes on dividends received</td><td>Shareholders pay taxes on dividends and capital gains</td></tr></tbody></table>]]></content>
+        <author>
+            <name>Hinny Tsang</name>
+            <uri>https://github.com/HinnyTsang</uri>
+        </author>
+        <category label="Finance" term="Finance"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Correlation]]></title>
+        <id>https://www.my-universe.hinnytsang.com/knowledge-base/correlation</id>
+        <link href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation"/>
+        <updated>2025-10-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Notes on module 3.]]></summary>
+        <content type="html"><![CDATA[<p>Notes on module 6.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-balance-sheet-leverage-and-default">The Balance Sheet: Leverage and Default<a href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation#the-balance-sheet-leverage-and-default" class="hash-link" aria-label="Direct link to The Balance Sheet: Leverage and Default" title="Direct link to The Balance Sheet: Leverage and Default">​</a></h2>
+<p>The balance sheet for a person or a company shows their financial position at a specific point in time. It consists of three main components: assets, liabilities, and equity, the relation is given by the fundemental accounting equation:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>s</mi><mi>s</mi><mi>e</mi><mi>t</mi><mi>s</mi><mo>=</mo><mi>L</mi><mi>i</mi><mi>a</mi><mi>b</mi><mi>i</mi><mi>l</mi><mi>i</mi><mi>t</mi><mi>i</mi><mi>e</mi><mi>s</mi><mo>+</mo><mi>E</mi><mi>q</mi><mi>u</mi><mi>i</mi><mi>t</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">Assets = Liabilities + Equity
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em"></span><span class="mord mathnormal">A</span><span class="mord mathnormal">sse</span><span class="mord mathnormal">t</span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em"></span><span class="mord mathnormal">L</span><span class="mord mathnormal">iabi</span><span class="mord mathnormal" style="margin-right:0.01968em">l</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span><span class="mord mathnormal">i</span><span class="mord mathnormal">es</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em"></span><span class="mord mathnormal" style="margin-right:0.03588em">Eq</span><span class="mord mathnormal">u</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.03588em">y</span></span></span></span></span>
+<p>Where:</p>
+<ul>
+<li>Assets: e.g. cash, house, car, investments, etc.</li>
+<li>Liabilities: e.g. mortgage, loans, credit card debt, etc.</li>
+<li>Equity: Assets - Liabilities / net worth / owner's equity.</li>
+</ul>
+<p>Let's say I have 150k before buying a house, and I buy a house for 500k with a mortgage of 400k. Before, I have cash only.</p>
+<ul>
+<li>Assets: 150k(Cash)</li>
+<li>Liabilities: 0</li>
+<li>Equity: 150k</li>
+</ul>
+<p>After:</p>
+<p>I have a house worth 500k, a mortgage of 400k, and cash of 150k - 100k = 50k.</p>
+<ul>
+<li>Assets: 500k(House) + 50k(Cash) = 550k</li>
+<li>Liabilities: 400k(Mortgage)</li>
+<li>Equity: 550k - 400k = 150k</li>
+</ul>
+<p>Examples of elements on a balance sheet for a bank:</p>
+<table><thead><tr><th>element</th><th>class</th></tr></thead><tbody><tr><td>Cash</td><td>Asset</td></tr><tr><td>Loan to customer</td><td>Asset</td></tr><tr><td>Mortgage to customer</td><td>Asset</td></tr><tr><td>Deposit from customer</td><td>Liability</td></tr><tr><td>Bank Capital</td><td>Equity</td></tr><tr><td>Capital reserve</td><td>Equity</td></tr><tr><td>Reserves for Bad Loans</td><td>Asset</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="measuring-leverage-with-equity-multiplier">Measuring Leverage with Equity Multiplier<a href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation#measuring-leverage-with-equity-multiplier" class="hash-link" aria-label="Direct link to Measuring Leverage with Equity Multiplier" title="Direct link to Measuring Leverage with Equity Multiplier">​</a></h3>
+<p>The equity multiplier (EM) is a measure of financial leverage, calculated as:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>E</mi><mi>M</mi><mo>=</mo><mfrac><mrow><mi>A</mi><mi>s</mi><mi>s</mi><mi>e</mi><mi>t</mi><mi>s</mi></mrow><mrow><mi>E</mi><mi>q</mi><mi>u</mi><mi>i</mi><mi>t</mi><mi>y</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">EM = \frac{Assets}{Equity}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em"></span><span class="mord mathnormal" style="margin-right:0.10903em">EM</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:2.2408em;vertical-align:-0.8804em"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em">Eq</span><span class="mord mathnormal">u</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.03588em">y</span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord mathnormal">A</span><span class="mord mathnormal">sse</span><span class="mord mathnormal">t</span><span class="mord mathnormal">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="model-failure-and-crises">Model Failure and Crises<a href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation#model-failure-and-crises" class="hash-link" aria-label="Direct link to Model Failure and Crises" title="Direct link to Model Failure and Crises">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-rent-or-own">1. Rent or Own?<a href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation#1-rent-or-own" class="hash-link" aria-label="Direct link to 1. Rent or Own?" title="Direct link to 1. Rent or Own?">​</a></h3>
+<ol>
+<li>
+<p>Depends on country of live, UK ~ 44% rent, US ~ 37% rent, but China around 14% rent.</p>
+</li>
+<li>
+<p>Depends on individual's situation.</p>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-developers-and-landlords">2. Developers and Landlords<a href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation#2-developers-and-landlords" class="hash-link" aria-label="Direct link to 2. Developers and Landlords" title="Direct link to 2. Developers and Landlords">​</a></h3>
+<ul>
+<li>Landlords profit by processing real estates.</li>
+<li>Developers profit by creating real estates.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-the-costs-of-development-and-how-to-finance-them">3. The Costs of Development and How to Finance Them<a href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation#3-the-costs-of-development-and-how-to-finance-them" class="hash-link" aria-label="Direct link to 3. The Costs of Development and How to Finance Them" title="Direct link to 3. The Costs of Development and How to Finance Them">​</a></h3>
+<p>Readings <a href="https://archive.strongtowns.org/journal/2020/9/15/6-things-to-know-about-development" target="_blank" rel="noopener noreferrer">6 Things to Know About How Development Works</a></p>
+<ol>
+<li>
+<p>Developer is a broader category than you think.</p>
+</li>
+<li>
+<p>The cost of building sets the floor under the price of a brand new home, the cost for a new home includes:</p>
+<ul>
+<li>Profit / ROI</li>
+<li>Finance</li>
+<li>Construction</li>
+<li>Land</li>
+<li>Tax, Title, Insurence</li>
+<li>Fees
+Hence, for 2nd hand homes, the price should be lower than brand new homes. (at lease no Profit)</li>
+</ul>
+</li>
+<li>
+<p>Even non-profit developers have a floor unless subsidized.</p>
+</li>
+<li>
+<p>The rent on new apartments pays the cost of building them, it must cover the following items:</p>
+<ul>
+<li>Operating expenses</li>
+<li>Debt service</li>
+<li>Capital reserves</li>
+<li>A dept coverage raatio.</li>
+</ul>
+</li>
+<li>
+<p>The price of land depends heavily on its development potential.</p>
+</li>
+</ol>
+<p>The Developer's balance sheet:</p>
+<ol>
+<li>Liabilities</li>
+</ol>
+<ul>
+<li>issue bonds</li>
+<li>take loans from banks, etc.</li>
+</ul>
+<ol start="2">
+<li>Equity</li>
+</ol>
+<ul>
+<li>sell ownership stack by issuing shares.</li>
+<li>REITs (Real Estate Investment Trusts, a company that owns, operates, or finances income-producing real estate.)</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-housing-finance-problem-and-its-solutions">The Housing Finance Problem and its Solutions<a href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation#the-housing-finance-problem-and-its-solutions" class="hash-link" aria-label="Direct link to The Housing Finance Problem and its Solutions" title="Direct link to The Housing Finance Problem and its Solutions">​</a></h2>
+<p>Housing Microfinance (HMF)</p>
+<ul>
+<li>
+<p>Provides small loans to low-income households or individuals who lack access to traditional banking services, enabling them to improve their housing conditions.</p>
+</li>
+<li>
+<p>What are the main driver of market growth of HMF?</p>
+<ul>
+<li>Rising urbanization and housing demand in developing countries.</li>
+<li>Increasing awareness about HMF services.</li>
+<li>Supportive government policies and initiatives.</li>
+</ul>
+</li>
+<li>
+<p>What are the main constraints to market growth of HMF?</p>
+<ul>
+<li>Limited access to funding for HMF providers.</li>
+<li>High operational costs and risks associated with lending to low-income borrowers.</li>
+<li>Lack of awareness and understanding of HMF products among potential clients.</li>
+</ul>
+</li>
+</ul>
+<p>Contracual savings for housing (CSH)</p>
+<ul>
+<li>
+<p>Financial institutions that collect regular savings from individuals and provide them with affordable housing loans.</p>
+</li>
+<li>
+<p>Difference between open and closed CSH?</p>
+<ul>
+<li>Open CSH: allow members to join and leave freely, providing flexibility.</li>
+<li>Closed CSH: have a fixed membership, often tied to specific organizations or communities.</li>
+</ul>
+</li>
+<li>
+<p>How CSH minimize credit risk?</p>
+<ul>
+<li>Creditworthiness of members before granting loans.</li>
+<li>Strict repayment schedules and monitoring mechanisms.</li>
+<li>Encouraging savings habits among members.</li>
+</ul>
+</li>
+<li>
+<p>Main challenges?</p>
+</li>
+</ul>
+<p>Housing bonds</p>
+<ul>
+<li>Debt securities issued by governments or financial institutions to raise funds for housing projects.</li>
+</ul>
+<p>Mortgage liquidity facilities (MLF)</p>
+<ul>
+<li>Financial mechanisms that provide liquidity to mortgage lenders, enabling them to offer more loans to homebuyers.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="reits-vs-reocs">REITs vs REOCs<a href="https://www.my-universe.hinnytsang.com/knowledge-base/correlation#reits-vs-reocs" class="hash-link" aria-label="Direct link to REITs vs REOCs" title="Direct link to REITs vs REOCs">​</a></h2>
+<p>Both REITs (Real Estate Investment Trusts) and REOCs (Real Estate Operating Companies):</p>
+<ul>
+<li>Primarily own residential real estate.</li>
+<li>Derive most of their income from rent or property sale.</li>
+<li>Are publicly listed on an exchange.</li>
+<li>Eliminate the hassle of actually owning, letting, and managing properties yourself.</li>
+<li>Allow even small investors to buy a slice of the income generated by a number of different properties.</li>
+</ul>
+<p>The main difference is:</p>
+<table><thead><tr><th>REITs</th><th>REOCs</th></tr></thead><tbody><tr><td>Distribute at least 90% of taxable income as dividends to shareholders</td><td>Can retain earnings for growth and development</td></tr><tr><td>Benefit from special tax treatment, avoiding corporate income tax</td><td>Subject to corporate income tax on profits</td></tr><tr><td>Shareholders pay taxes on dividends received</td><td>Shareholders pay taxes on dividends and capital gains</td></tr></tbody></table>]]></content>
+        <author>
+            <name>Hinny Tsang</name>
+            <uri>https://github.com/HinnyTsang</uri>
+        </author>
+        <category label="Finance" term="Finance"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Return and Volatility]]></title>
         <id>https://www.my-universe.hinnytsang.com/knowledge-base/return-and-volatility</id>
@@ -1692,175 +2036,6 @@ d V(S_t, t)
             <uri>https://github.com/HinnyTsang</uri>
         </author>
         <category label="Quant" term="Quant"/>
-        <category label="Stochastic" term="Stochastic"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Generative AI Evaluation Methods]]></title>
-        <id>https://www.my-universe.hinnytsang.com/knowledge-base/generative-ai-evaluation-methods</id>
-        <link href="https://www.my-universe.hinnytsang.com/knowledge-base/generative-ai-evaluation-methods"/>
-        <updated>2025-05-16T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[The evaluation of generative AI models is a complex task that requires a combination of qualitative and quantitative methods. Here is the points that I summarized from the Machine Learning Operations with Vertex AI tutorial from Google.]]></summary>
-        <content type="html"><![CDATA[<p>The evaluation of generative AI models is a complex task that requires a combination of qualitative and quantitative methods. Here is the points that I summarized from the Machine Learning Operations with Vertex AI tutorial from Google.</p>
-<p>In general, the evaluation methods can be categorized into several types:</p>
-<ol>
-<li>
-<p>Binary Evaluation</p>
-<ul>
-<li>e.g. positive or negative sentiment analysis, spam detection, and appropriate content detection.</li>
-</ul>
-</li>
-<li>
-<p>Category Evaluation</p>
-<ul>
-<li>e.g. topic classification, sentiment analysis including neutral, and product rating.</li>
-</ul>
-</li>
-<li>
-<p>Ranking Evaluation</p>
-<ul>
-<li>Rank the relative quality for different outputs.</li>
-<li>e.g. ranking search results, ranking product recommendations, and ranking news articles.</li>
-</ul>
-</li>
-<li>
-<p>Numerical Evaluation</p>
-<ul>
-<li>Assigns a quantitative score to model output.</li>
-<li>e.g. BLEU, ROUGE, METEOR, perplexity, and F1 score.</li>
-</ul>
-</li>
-<li>
-<p>Text Evaluation</p>
-<ul>
-<li>Evaluation of the text by human.</li>
-</ul>
-</li>
-<li>
-<p>Multi-task Evaluation</p>
-<ul>
-<li>Mixture of the above methods.</li>
-</ul>
-</li>
-</ol>
-<p>The choice of evaluation method depends on the specific task and the goals of the evaluation. Below are some examples:</p>
-<ol>
-<li>
-<p>Lexical Similarity</p>
-<ul>
-<li>Measure the similarity between the model's output and reference text, based on word overlap, sequence of words, or semantic similarity.</li>
-<li>e.g. BLEU focuses on n-gram overlap, ROUGE focuses on recall, and METEOR focuses on both precision and recall.</li>
-</ul>
-</li>
-<li>
-<p>Linguistic Quality</p>
-<ul>
-<li>Evaluate the fluency, coherence, and grammatical correctness of the generated text.</li>
-<li>e.g. Perplexity, BLEURT.</li>
-</ul>
-</li>
-<li>
-<p>Task-Specific Evaluation</p>
-<ul>
-<li>Evaluate the performance of the model on specific tasks, such as summarization, translation, or question answering.</li>
-<li>e.g. BLEU for translation, and ROUGE for summarization.</li>
-</ul>
-</li>
-<li>
-<p>Safety and fairness</p>
-<ul>
-<li>Evaluate the model's output for safety and fairness, including bias detection and harmful content detection.</li>
-<li>e.g. toxicity detection, hate speech detection, and bias detection or even human evaluation.</li>
-</ul>
-</li>
-<li>
-<p>Groundedness</p>
-<ul>
-<li>Evaluate the factual accuracy of the model's output.</li>
-<li>e.g. Fact-checking tools, knowledge-based integration and human evaluation.</li>
-</ul>
-</li>
-<li>
-<p>User-Centric Evaluation</p>
-<ul>
-<li>Focus on the user experience and satisfaction with the model's output.</li>
-<li>e.g. User survey.</li>
-</ul>
-</li>
-</ol>
-<p>Moreover, there are some common evaluation paradigms:</p>
-<ol>
-<li>
-<p>Pointwise Evaluation:</p>
-<ul>
-<li>Evaluating model behavior in production.</li>
-<li>Absolute performance of a single model.</li>
-<li>Identifying behaviors to prioritize for tuning.</li>
-<li>Establishing a baseline for model performance.</li>
-</ul>
-</li>
-<li>
-<p>Pairwise Evaluation:</p>
-<ul>
-<li>Comparison of two models.</li>
-</ul>
-</li>
-</ol>
-<p>Evaluation methods are not only computation based, but also be model based, using LLM as a judge to evaluate the model output (Google Auto Side by Side). In summary, the choice of evaluation method depends on the specific task and the goals of the evaluation. I may talk about more about the evaluation metrics in the future.</p>]]></content>
-        <author>
-            <name>Hinny Tsang</name>
-            <uri>https://github.com/HinnyTsang</uri>
-        </author>
-        <category label="Generative AI" term="Generative AI"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Ito's Lamma]]></title>
-        <id>https://www.my-universe.hinnytsang.com/knowledge-base/ito-lamma</id>
-        <link href="https://www.my-universe.hinnytsang.com/knowledge-base/ito-lamma"/>
-        <updated>2025-05-13T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[In very simple terms, Ito's lemma is a formula that allows us to compute the differential of a function of a stochastic process. In normal functions, we can use the chain rule to compute the differential of a function. However, in stochastic calculus, we need to use Ito's lemma.]]></summary>
-        <content type="html"><![CDATA[<p>In very simple terms, Ito's lemma is a formula that allows us to compute the differential of a function of a stochastic process. In normal functions, we can use the chain rule to compute the differential of a function. However, in stochastic calculus, we need to use Ito's lemma.</p>
-<p>Suppose we have a stochastic process <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">X_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span> that follows a stochastic differential equation (SDE).</p>
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><msub><mi>X</mi><mi>t</mi></msub><mo>=</mo><mi>μ</mi><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo separator="true">,</mo><mi>t</mi><mo stretchy="false">)</mo><mi>d</mi><mi>t</mi><mo>+</mo><mi>σ</mi><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo separator="true">,</mo><mi>t</mi><mo stretchy="false">)</mo><mi>d</mi><msub><mi>W</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">dX_t = \mu(X_t, t) dt + \sigma(X_t, t) dW_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em"></span><span class="mord mathnormal">d</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord mathnormal">μ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord mathnormal" style="margin-right:0.03588em">σ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></span>
-<p>where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>W</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">W_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span> is a Wiener process (or Brownian motion), <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo separator="true">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mu(X_t, t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord mathnormal">μ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span> is the drift term, and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo separator="true">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\sigma(X_t, t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord mathnormal" style="margin-right:0.03588em">σ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span> is the diffusion term.</p>
-<p>Now, let's say we have a function <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo separator="true">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(X_t, t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord mathnormal" style="margin-right:0.10764em">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span> (twice differentiable) that we want to differentiate with respect to time. Ito's lemma states that the differential of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo separator="true">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(X_t, t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord mathnormal" style="margin-right:0.10764em">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span> is given by:</p>
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>f</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi>d</mi><mi>t</mi><mo>=</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>f</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>t</mi></mrow></mfrac><mi>d</mi><mi>t</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mfrac><mrow><msup><mi mathvariant="normal">∂</mi><mn>2</mn></msup><mi>f</mi></mrow><mrow><mi mathvariant="normal">∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo stretchy="false">(</mo><mi>d</mi><mi>t</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo>⋯</mo></mrow><annotation encoding="application/x-tex">\frac{\Delta f(t)}{dt} dt
-= \frac{\partial f}{\partial t} dt
-+ \frac{1}{2}\frac{\partial^2f}{\partial t^2} (dt)^2
-+ \cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.113em;vertical-align:-0.686em"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.10764em">f</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="mord mathnormal" style="margin-right:0.10764em">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span></span><span class="base"><span class="strut" style="height:2.1771em;vertical-align:-0.686em"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em"><span style="top:-2.989em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em"><span style="top:-3.063em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.10764em">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mopen">(</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em"><span style="top:-3.113em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span></span><span class="base"><span class="strut" style="height:0.313em"></span><span class="minner">⋯</span></span></span></span></span>
-<p>and so with <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em"></span><span class="mord mathnormal">x</span></span></span></span>, the total derivative of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em"></span><span class="mord mathnormal" style="margin-right:0.10764em">f</span></span></span></span> will be</p>
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.25em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mi>d</mi><mi>f</mi></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><msub><mi>f</mi><mi>t</mi></msub><mi>d</mi><mi>t</mi><mo>+</mo><msub><mi>f</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>d</mi><mi>x</mi><mo separator="true">,</mo><mi>d</mi><mi>t</mi><mo>→</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn></mrow></munder><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>f</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>t</mi></mrow></mfrac><mi>d</mi><mi>t</mi><mo>+</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>f</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>x</mi></mrow></mfrac><mi>d</mi><mi>x</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mrow><mo fence="true">(</mo><mfrac><mrow><msup><mi mathvariant="normal">∂</mi><mn>2</mn></msup><mi>f</mi></mrow><mrow><mi mathvariant="normal">∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo stretchy="false">(</mo><mi>d</mi><mi>t</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mfrac><mrow><msup><mi mathvariant="normal">∂</mi><mn>2</mn></msup><mi>f</mi></mrow><mrow><mi mathvariant="normal">∂</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo stretchy="false">(</mo><mi>d</mi><mi>x</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo fence="true">)</mo></mrow><mo>+</mo><mo>⋯</mo></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align*}
-df &amp;= f_t dt + f_x dx \\
-&amp;=\lim_{dx, dt\rightarrow 0, 0} \frac{\partial f}{\partial t} dt
-+ \frac{\partial f}{\partial x} dx
-+ \frac{1}{2} \left(\frac{\partial^2f}{\partial t^2} (dt)^2
-+ \frac{\partial^2f}{\partial x^2} (dx)^2 \right)
-+ \cdots
-\end{align*}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:4.2411em;vertical-align:-1.8706em"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.3706em"><span style="top:-5.0217em"><span class="pstrut" style="height:3.4911em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em">df</span></span></span><span style="top:-2.8706em"><span class="pstrut" style="height:3.4911em"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.8706em"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.3706em"><span style="top:-5.0217em"><span class="pstrut" style="height:3.4911em"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span><span style="top:-2.8706em"><span class="pstrut" style="height:3.4911em"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em"><span style="top:-2.3479em;margin-left:0em"><span class="pstrut" style="height:3em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">x</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">t</span><span class="mrel mtight">→</span><span class="mord mtight">0</span><span class="mpunct mtight">,</span><span class="mord mtight">0</span></span></span></span><span style="top:-3em"><span class="pstrut" style="height:3em"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8882em"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="mord mathnormal" style="margin-right:0.10764em">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="mord mathnormal">x</span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="mord mathnormal" style="margin-right:0.10764em">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em"></span><span class="minner"><span class="mopen delimcenter" style="top:0em"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em"><span style="top:-2.989em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em"><span style="top:-3.063em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.10764em">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mopen">(</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em"><span style="top:-3.113em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em"><span style="top:-2.989em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em"><span style="top:-3.063em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.10764em">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mopen">(</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em"><span style="top:-3.113em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span><span class="minner">⋯</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.8706em"><span></span></span></span></span></span></span></span></span></span></span></span>
-<p>Than substitute <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><msub><mi>X</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">x = X_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span>, in the limit <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>t</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">dt \to 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:0.6444em"></span><span class="mord">0</span></span></span></span>, the following terms tend to zero faster than <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">dt</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span></span> are:</p>
-<ol>
-<li>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>d</mi><mi>t</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(dt)^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em"></span><span class="mopen">(</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em"><span style="top:-3.063em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></p>
-</li>
-<li>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>t</mi><mi>d</mi><msub><mi>W</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">dtdW_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mord mathnormal">d</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></p>
-</li>
-<li>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>d</mi><mi>x</mi><msup><mo stretchy="false">)</mo><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">(dx)^3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em"></span><span class="mopen">(</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em"><span style="top:-3.063em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></p>
-</li>
-</ol>
-<p>Noted that <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>d</mi><msub><mi>B</mi><mi>t</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>=</mo><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>d</mi><mi>t</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(dB_t)^2 = \mathcal{O}(dt)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em"></span><span class="mopen">(</span><span class="mord mathnormal">d</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em"><span style="top:-3.063em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord mathcal" style="margin-right:0.02778em">O</span><span class="mopen">(</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span> due to quadratic variation of a Wiener process. # TODO,
-Hance</p>
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>f</mi><mo>=</mo><munder><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>d</mi><mi>t</mi><mo>→</mo><mn>0</mn></mrow></munder><mrow><mo fence="true">(</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>f</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>t</mi></mrow></mfrac><mo>+</mo><msub><mi>μ</mi><mi>t</mi></msub><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>f</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>x</mi></mrow></mfrac><mo>+</mo><mfrac><msubsup><mi>σ</mi><mi>t</mi><mn>2</mn></msubsup><mn>2</mn></mfrac><mfrac><mrow><msup><mi mathvariant="normal">∂</mi><mn>2</mn></msup><mi>f</mi></mrow><mrow><mi mathvariant="normal">∂</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo fence="true">)</mo></mrow><mi>d</mi><mi>t</mi><mo>+</mo><msub><mi>σ</mi><mi>t</mi></msub><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>f</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>x</mi></mrow></mfrac><mi>d</mi><msub><mi>W</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">df
-= \lim_{dt \to 0} \left(\frac{\partial f}{\partial t}
-+ \mu_t \frac{\partial f}{\partial x}
-+ \frac{\sigma_t^2}{2} \frac{\partial^2 f}{\partial x^2} \right) dt
-+ \sigma_t \frac{\partial f}{\partial x} dW_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em"></span><span class="mord mathnormal" style="margin-right:0.10764em">df</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:2.4411em;vertical-align:-0.95em"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em"><span style="top:-2.3479em;margin-left:0em"><span class="pstrut" style="height:3em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">t</span><span class="mrel mtight">→</span><span class="mord mtight">0</span></span></span></span><span style="top:-3em"><span class="pstrut" style="height:3em"></span><span><span class="mop">lim</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7521em"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em"></span><span class="minner"><span class="mopen delimcenter" style="top:0em"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="mord mathnormal" style="margin-right:0.10764em">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="mord mathnormal">x</span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="mord mathnormal" style="margin-right:0.10764em">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em"><span style="top:-2.453em;margin-left:-0.0359em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span><span style="top:-3.063em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em"><span style="top:-2.989em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em"><span style="top:-3.063em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.10764em">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="mord mathnormal">x</span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord" style="margin-right:0.05556em">∂</span><span class="mord mathnormal" style="margin-right:0.10764em">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal">d</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></span>
-<p>That's it!</p>]]></content>
-        <author>
-            <name>Hinny Tsang</name>
-            <uri>https://github.com/HinnyTsang</uri>
-        </author>
         <category label="Stochastic" term="Stochastic"/>
     </entry>
 </feed>
